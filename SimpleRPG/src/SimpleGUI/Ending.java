@@ -12,7 +12,7 @@ public class Ending {
     //shows happy ending text
     public static void goodGame() {
         PlayerScoresMain.main();
-        String goodEnding = ("\nPlayer: " + player.getUsername() + "  Score: " + Hero.getHeroScore() + "\n\nCongralutations! " + Hero.animalName + " is at maximum happiness!"
+        String goodEnding = ("\nPlayer: " + player.getUsername() + "  Score: " + Hero.getHeroScore() + "\n\nCongralutations! " + Hero.animalName + " is at maximum health!"
                    + "\nWell done, you have completed the game!\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));

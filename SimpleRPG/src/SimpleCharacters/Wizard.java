@@ -9,7 +9,7 @@ public class Wizard extends Hero{
         this.name = name;
         this.nationality = nationality;
         super.hunger = 3;
-        super.happiness = 5;
+        super.health = 5;
         super.obedience = 7;
         super.hygiene = 7;
         super.intelligence = 4;

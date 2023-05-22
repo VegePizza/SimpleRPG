@@ -23,7 +23,7 @@ public class Eat extends Hero{
                     break;
                 }
                 this.food = "Basic Food: $2";
-                Hero.happiness += 1;
+                Hero.health += 1;
                 Hero.hunger -= 1;
                 Hero.hygiene -= 3;
                 Hero.money -= 2;
@@ -36,7 +36,7 @@ public class Eat extends Hero{
                     break;
                 }
                 this.food = "Intermediate Food: $4";
-                Hero.happiness += 2;
+                Hero.health += 2;
                 Hero.hunger -= 2;
                 Hero.hygiene -= 2;
                 Hero.money -= 4;
@@ -49,7 +49,7 @@ public class Eat extends Hero{
                     break;
                 }
                 this.food = "Luxury Food: $6";
-                Hero.happiness += 3;
+                Hero.health += 3;
                 Hero.hunger -= 3;
                 Hero.hygiene -= 1;
                 Hero.money -= 6;
@@ -91,7 +91,7 @@ public class Eat extends Hero{
     //output to user effects of feed method
     public String feedHero(){
         String feedText = ("Hero is fed " + getFood() 
-                        + "\nHero Happiness is increased by " + getFoodOption() + "\nHappiness: " + getHero().happiness
+                        + "\nHero Happiness is increased by " + getFoodOption() + "\nHappiness: " + getHero().health
                         + "\nHero Hunger is decreased by " + getFoodOption() + "\nHunger: " + getHero().hunger
                         + "\nHero Hygiene is decreased by " + getFoodHygiene() + "\nHygiene: " + getHero().hygiene
                         + "\nMoney is decreased by " + getFoodOption()*2 + "\nMoney: " + getHero().money);

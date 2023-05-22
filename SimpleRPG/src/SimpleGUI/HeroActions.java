@@ -267,10 +267,10 @@ public class HeroActions extends JFrame{
         HeroGameArea.append(Hero.checkHappiness(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
-        if (Hero.happiness >= 40){
+        if (Hero.health >= 40){
             Ending.goodGame();
             HeroActions.super.dispose();
-        } else if (Hero.happiness == 0){
+        } else if (Hero.health == 0){
             Ending.badGame();
             HeroActions.super.dispose();
         }
@@ -316,10 +316,10 @@ public class HeroActions extends JFrame{
         HeroGameArea.append(Hero.checkHappiness(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
-        if (Hero.happiness >= 40){
+        if (Hero.health >= 40){
             Ending.goodGame();
             HeroActions.super.dispose();
-        } else if (Hero.happiness == 0){
+        } else if (Hero.health == 0){
             Ending.badGame();
             HeroActions.super.dispose();
         }
@@ -365,10 +365,10 @@ public class HeroActions extends JFrame{
         HeroGameArea.append(Hero.checkHappiness(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
-        if (Hero.happiness >= 40){
+        if (Hero.health >= 40){
             Ending.goodGame();
             HeroActions.super.dispose();
-        } else if (Hero.happiness == 0){
+        } else if (Hero.health == 0){
             Ending.badGame();
             HeroActions.super.dispose();
         }

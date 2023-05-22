@@ -10,7 +10,7 @@ public class Adventure extends Hero{
     private int playHunger;
     private int playHygiene;
 
-    //play method to decrease hygiene but increase happiness and hunger
+    //play method to decrease hygiene but increase health and hunger
     public Adventure(Hero Hero, int playOption){
         this.Hero = Hero;
         this.playOption = playOption;
@@ -19,7 +19,7 @@ public class Adventure extends Hero{
             case 1:
                 //lowest option
                 this.activity = "Basic Fun";
-                Hero.happiness += 3;
+                Hero.health += 3;
                 Hero.hygiene -= 1;
                 Hero.hunger += 3;
                 this.playHunger = 3;
@@ -28,7 +28,7 @@ public class Adventure extends Hero{
             case 2:
                 //middle option
                 this.activity = "Intermediate Fun";
-                Hero.happiness += 6;
+                Hero.health += 6;
                 Hero.hygiene -= 1;
                 Hero.hunger += 2;
                 this.playHunger = 2;
@@ -37,7 +37,7 @@ public class Adventure extends Hero{
             case 3:
                 //highest option
                 this.activity = "Luxury Fun";
-                Hero.happiness += 9;
+                Hero.health += 9;
                 Hero.hygiene -= 1;
                 Hero.hunger += 1;
                 this.playHunger = 1;
@@ -80,7 +80,7 @@ public class Adventure extends Hero{
     //output to user the effects of Play
     public String playHero(){
         String playText = ("Hero has been given " + activity
-                       + "\nHero Happiness is increased by " + playOption*3 + "\nHappiness: " + Hero.happiness
+                       + "\nHero Happiness is increased by " + playOption*3 + "\nHappiness: " + Hero.health
                        + "\nHero Hunger is increased by " + this.playHunger + "\nHunger: " + Hero.hunger
                        + "\nHero Hygiene is decreased by " + this.playHygiene + "\nHygiene: " + Hero.hygiene);
         return playText;

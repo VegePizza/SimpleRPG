@@ -10,7 +10,7 @@ public class Train extends Hero{
     private int trainHunger;
     private int trainHygiene;
     
-    //Train method to increase obedience, happiness and hunger while decreasing hygiene
+    //Train method to increase obedience, health and hunger while decreasing hygiene
     public Train(Hero Hero, int trainOption){
         this.Hero = Hero;
         this.trainOption = trainOption;
@@ -19,7 +19,7 @@ public class Train extends Hero{
             case 1:
                 //lowest option
                 this.train = "Basic Training";
-                Hero.happiness += 1;
+                Hero.health += 1;
                 Hero.obedience += 1;
                 Hero.hunger += 3;
                 Hero.hygiene -= 3;
@@ -29,7 +29,7 @@ public class Train extends Hero{
             case 2:
                 //middle option
                 this.train = "Intermediate Training";
-                Hero.happiness += 2;
+                Hero.health += 2;
                 Hero.obedience += 2;
                 Hero.hunger += 2;
                 Hero.hygiene -= 2;
@@ -39,7 +39,7 @@ public class Train extends Hero{
             case 3:
                 //highest option
                 this.train = "Luxury Training";
-                Hero.happiness += 3;
+                Hero.health += 3;
                 Hero.obedience += 3;
                 Hero.hunger += 1;
                 Hero.hygiene -= 1;
@@ -89,7 +89,7 @@ public class Train extends Hero{
     //output to user effects of train
     public String trainHero(){
         String trainText = ("Hero has been given " + train
-                        + "\nHero Happiness is increased by " + trainOption + "\nHappiness: " + Hero.happiness
+                        + "\nHero Happiness is increased by " + trainOption + "\nHappiness: " + Hero.health
                         + "\nHero Obedience is increased by " + trainOption + "\nObedience: " + Hero.obedience
                         + "\nHero Hunger is increased by " + this.trainHunger + "\nHunger: " + Hero.hunger
                         + "\nHero Hygiene is decreased by " + this.trainHygiene + "\nHygiene: " + Hero.hygiene);

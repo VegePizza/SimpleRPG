@@ -9,7 +9,7 @@ public class Swordsman extends Hero{
         this.name = name;
         this.nationality = nationality;
         super.hunger = 2;
-        super.happiness = 10;
+        super.health = 10;
         super.obedience = 8;
         super.hygiene = 5;
         super.intelligence = 3;
