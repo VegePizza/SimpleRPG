@@ -10,8 +10,8 @@ public class Archer extends Hero{
         this.nationality = nationality;
         super.hunger = 3;
         super.health = 3;
-        super.obedience = 7;
-        super.hygiene = 7;
+        super.strength = 7;
+        super.agility = 7;
         super.intelligence = 1;
         super.animalName = name;
         super.nationality = nationality;

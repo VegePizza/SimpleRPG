@@ -8,9 +8,9 @@ public class Train extends Hero{
     private int trainOption;
     private String train;
     private int trainHunger;
-    private int trainHygiene;
+    private int trainagility;
     
-    //Train method to increase obedience, health and hunger while decreasing hygiene
+    //Train method to increase strength, health and hunger while decreasing agility
     public Train(Hero Hero, int trainOption){
         this.Hero = Hero;
         this.trainOption = trainOption;
@@ -20,35 +20,35 @@ public class Train extends Hero{
                 //lowest option
                 this.train = "Basic Training";
                 Hero.health += 1;
-                Hero.obedience += 1;
+                Hero.strength += 1;
                 Hero.hunger += 3;
-                Hero.hygiene -= 3;
+                Hero.agility -= 3;
                 this.trainHunger = 3;
-                this.trainHygiene = 3;
+                this.trainagility = 3;
                 break;
             case 2:
                 //middle option
                 this.train = "Intermediate Training";
                 Hero.health += 2;
-                Hero.obedience += 2;
+                Hero.strength += 2;
                 Hero.hunger += 2;
-                Hero.hygiene -= 2;
+                Hero.agility -= 2;
                 this.trainHunger = 2;
-                this.trainHygiene = 2;
+                this.trainagility = 2;
                 break;
             case 3:
                 //highest option
                 this.train = "Luxury Training";
                 Hero.health += 3;
-                Hero.obedience += 3;
+                Hero.strength += 3;
                 Hero.hunger += 1;
-                Hero.hygiene -= 1;
+                Hero.agility -= 1;
                 this.trainHunger = 1;
-                this.trainHygiene = 1;
+                this.trainagility = 1;
                 break;
             default:
                 this.trainHunger = 0;
-                this.trainHygiene = 0;
+                this.trainagility = 0;
                 this.trainOption = 0;
                 break;
         }
@@ -61,11 +61,11 @@ public class Train extends Hero{
     public void setTrainHunger(int trainHunger) {
         this.trainHunger = trainHunger;
     }
-    public int getTrainHygiene() {
-        return trainHygiene;
+    public int getTrainagility() {
+        return trainagility;
     }
-    public void setTrainHygiene(int trainHygiene) {
-        this.trainHygiene = trainHygiene;
+    public void setTrainagility(int trainagility) {
+        this.trainagility = trainagility;
     }
     public Hero getHero() {
         return Hero;
@@ -90,9 +90,9 @@ public class Train extends Hero{
     public String trainHero(){
         String trainText = ("Hero has been given " + train
                         + "\nHero Happiness is increased by " + trainOption + "\nHappiness: " + Hero.health
-                        + "\nHero Obedience is increased by " + trainOption + "\nObedience: " + Hero.obedience
+                        + "\nHero Obedience is increased by " + trainOption + "\nObedience: " + Hero.strength
                         + "\nHero Hunger is increased by " + this.trainHunger + "\nHunger: " + Hero.hunger
-                        + "\nHero Hygiene is decreased by " + this.trainHygiene + "\nHygiene: " + Hero.hygiene);
+                        + "\nHero agility is decreased by " + this.trainagility + "\nagility: " + Hero.agility);
         return trainText;
     }
      

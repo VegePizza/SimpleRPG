@@ -10,8 +10,8 @@ public class Swordsman extends Hero{
         this.nationality = nationality;
         super.hunger = 2;
         super.health = 10;
-        super.obedience = 8;
-        super.hygiene = 5;
+        super.strength = 8;
+        super.agility = 5;
         super.intelligence = 3;
         super.animalName = name;
         super.nationality = nationality;

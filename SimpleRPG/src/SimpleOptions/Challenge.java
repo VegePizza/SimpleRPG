@@ -8,7 +8,7 @@ public class Challenge extends Hero{
     private String clean;
     private int cleanHappiness;
 
-    //Clean method affects hygiene stats depending on user input
+    //Clean method affects agility stats depending on user input
     public Challenge(Hero Hero, int cleaningOption){
         this.Hero = Hero;
         this.cleaningOption = cleaningOption;
@@ -23,7 +23,7 @@ public class Challenge extends Hero{
                 }
                 this.clean = "Basic clean: $2";
                 Hero.health -= 3;
-                Hero.hygiene += 1;
+                Hero.agility += 1;
                 Hero.money -= 2;
                 this.cleanHappiness = 3;
                 break;
@@ -35,7 +35,7 @@ public class Challenge extends Hero{
                 }
                 this.clean = "Intermediate Clean: $4";
                 Hero.health -= 2;
-                Hero.hygiene += 2;
+                Hero.agility += 2;
                 Hero.money -= 4;
                 this.cleanHappiness = 2;
                 break;
@@ -47,7 +47,7 @@ public class Challenge extends Hero{
                 }
                 this.clean = "Luxury Clean: $6";
                 Hero.health -= 1;
-                Hero.hygiene += 3;
+                Hero.agility += 3;
                 Hero.money -= 6;
                 this.cleanHappiness = 1;
                 break;
@@ -88,7 +88,7 @@ public class Challenge extends Hero{
     public String cleanHero(){
         String cleanText = ("Hero has been given a " + clean
                         + "\nHero health is decreased by "+ this.cleanHappiness + "\nHappiness: " + Hero.health
-                        + "\nHero Hygiene is increased by " + cleaningOption + "\nHygiene: " + Hero.hygiene
+                        + "\nHero agility is increased by " + cleaningOption + "\nagility: " + Hero.agility
                         + "\nMoney is decreased by " + cleaningOption*2 + "\nMoney: " + Hero.getMoney());
         return cleanText;
     }

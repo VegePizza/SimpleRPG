@@ -8,9 +8,9 @@ public class Adventure extends Hero{
     private int playOption;
     private String activity;
     private int playHunger;
-    private int playHygiene;
+    private int playagility;
 
-    //play method to decrease hygiene but increase health and hunger
+    //play method to decrease agility but increase health and hunger
     public Adventure(Hero Hero, int playOption){
         this.Hero = Hero;
         this.playOption = playOption;
@@ -20,33 +20,33 @@ public class Adventure extends Hero{
                 //lowest option
                 this.activity = "Basic Fun";
                 Hero.health += 3;
-                Hero.hygiene -= 1;
+                Hero.agility -= 1;
                 Hero.hunger += 3;
                 this.playHunger = 3;
-                this.playHygiene = 2;
+                this.playagility = 2;
                 break;
             case 2:
                 //middle option
                 this.activity = "Intermediate Fun";
                 Hero.health += 6;
-                Hero.hygiene -= 1;
+                Hero.agility -= 1;
                 Hero.hunger += 2;
                 this.playHunger = 2;
-                this.playHygiene = 2;
+                this.playagility = 2;
                 break;
             case 3:
                 //highest option
                 this.activity = "Luxury Fun";
                 Hero.health += 9;
-                Hero.hygiene -= 1;
+                Hero.agility -= 1;
                 Hero.hunger += 1;
                 this.playHunger = 1;
-                this.playHygiene = 1;
+                this.playagility = 1;
                 break;
             default:
                 this.playHunger = 0;
                 this.playOption = 0;
-                this.playHygiene = 0;
+                this.playagility = 0;
                 break;
         }
     }
@@ -82,7 +82,7 @@ public class Adventure extends Hero{
         String playText = ("Hero has been given " + activity
                        + "\nHero Happiness is increased by " + playOption*3 + "\nHappiness: " + Hero.health
                        + "\nHero Hunger is increased by " + this.playHunger + "\nHunger: " + Hero.hunger
-                       + "\nHero Hygiene is decreased by " + this.playHygiene + "\nHygiene: " + Hero.hygiene);
+                       + "\nHero agility is decreased by " + this.playagility + "\nagility: " + Hero.agility);
         return playText;
     }
      

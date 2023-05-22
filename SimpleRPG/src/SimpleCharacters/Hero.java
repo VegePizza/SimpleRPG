@@ -6,8 +6,8 @@ public class Hero {
     public String nationality;
     public int health;
     public int hunger;
-    public int obedience;
-    public int hygiene;
+    public int strength;
+    public int agility;
     public int intelligence;
     public int money;
     public int HeroScore;
@@ -18,10 +18,10 @@ public class Hero {
         this.nationality = "";
         this.health = 0;
         this.hunger = 0;
-        this.hygiene = 0;
+        this.agility = 0;
         this.intelligence = 0;
         this.money = 30;
-        this.obedience = 0;
+        this.strength = 0;
         this.HeroScore = 0;          
     }
 
@@ -48,16 +48,16 @@ public class Hero {
         this.hunger = hunger;
     }
     public int getObedience() {
-        return obedience;
+        return strength;
     }
-    public void setObedience(int obedience) {
-        this.obedience = obedience;
+    public void setObedience(int strength) {
+        this.strength = strength;
     }   
-    public int getHygiene(){
-        return hygiene;
+    public int getagility(){
+        return agility;
     }   
-    public void setHygiene(int hygiene){
-        this.hygiene = hygiene;
+    public void setagility(int agility){
+        this.agility = agility;
     }   
     public String getanimalName() {
         return this.animalName;
@@ -83,8 +83,8 @@ public class Hero {
         String HeroStats = (this.animalName + " Stats:"
                 + "\nHunger: " + this.hunger
                 + "\nHappiness: " + this.health
-                + "\nObedience: " + this.obedience
-                + "\nHygiene: " + this.hygiene
+                + "\nObedience: " + this.strength
+                + "\nagility: " + this.agility
                 + "\nIntelligence: " + this.intelligence
                 + "\nMoney: " + this.money);
 
@@ -117,54 +117,54 @@ public class Hero {
         {
             healthText = ("\n" + this.animalName + " is extremely happy!\n");
         }
-        this.HeroScore = this.health + this.hunger + this.hygiene + this.intelligence
-                + this.money + this.obedience;
+        this.HeroScore = this.health + this.hunger + this.agility + this.intelligence
+                + this.money + this.strength;
         return healthText;
     }
 
-    //checks hygiene level and if hygiene is less than 0, health and obedience decreases by 5
-    public String checkHygiene(Hero Hero){
-        String hygieneText = "";
-        if (Hero.hygiene <= 0){
+    //checks agility level and if agility is less than 0, health and strength decreases by 5
+    public String checkagility(Hero Hero){
+        String agilityText = "";
+        if (Hero.agility <= 0){
             Hero.health -= 5;
-            Hero.obedience -= 5;
-            Hero.hygiene = 0;
+            Hero.strength -= 5;
+            Hero.agility = 0;
             if(Hero.health <= 0){
                Hero.health = 0;
-               hygieneText = ("\n" + Hero.animalName + " is Dirty!"
+               agilityText = ("\n" + Hero.animalName + " is Dirty!"
                             + "\nHappiness and Obedience decreased by 5"
                             + "\nHappiness cannot be below zero"
-                            + "\nHygiene cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.obedience
-                            + "\nHygiene: " + Hero.hygiene);
+                            + "\nagility cannot be below zero"
+                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nagility: " + Hero.agility);
             }
-            if(Hero.obedience <= 0){
-                Hero.obedience = 0;
-                hygieneText = ("\n" + Hero.animalName + " is Dirty!"
+            if(Hero.strength <= 0){
+                Hero.strength = 0;
+                agilityText = ("\n" + Hero.animalName + " is Dirty!"
                             + "\nHappiness and Obedience decreased by 5"
                             + "\nObedience cannot be below zero"
-                            + "\nHygiene cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.obedience
-                            + "\nHygiene: " + Hero.hygiene);
+                            + "\nagility cannot be below zero"
+                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nagility: " + Hero.agility);
             }
-            if(Hero.health <= 0 && Hero.obedience <= 0){
+            if(Hero.health <= 0 && Hero.strength <= 0){
                Hero.health = 0;
-               Hero.obedience = 0;
-               hygieneText = ("\n" + Hero.animalName + " is Dirty!"
+               Hero.strength = 0;
+               agilityText = ("\n" + Hero.animalName + " is Dirty!"
                             + "\nHappiness and Obedience decreased by 5"
                             + "\nHappiness and Obedience cannot be below zero"
-                            + "\nHygiene cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.obedience
-                            + "\nHygiene: " + Hero.hygiene);
+                            + "\nagility cannot be below zero"
+                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nagility: " + Hero.agility);
             }else{
-            hygieneText = ("\n" + Hero.animalName + " is Dirty!"
+            agilityText = ("\n" + Hero.animalName + " is Dirty!"
                             + "\nHappiness and Obedience decreased by 5"
-                            + "\nHygiene cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.obedience
-                            + "\nHygiene: " + Hero.hygiene);
+                            + "\nagility cannot be below zero"
+                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nagility: " + Hero.agility);
             }
         }
-        return hygieneText;
+        return agilityText;
     }
     
     //checks hunger level and if hunger is equal or more than 10, health decreases by 10.
@@ -198,8 +198,8 @@ public class Hero {
                 + "Happiness: " + this.health
                 + "\nNationality: " + this.nationality
                 + "\nHunger: " + this.hunger
-                + "\nObedience: " + this.obedience
-                + "\nHygiene: " + this.hygiene
+                + "\nObedience: " + this.strength
+                + "\nagility: " + this.agility
                 + "\nIntelligence: " + this.intelligence
                 + "\nMoney: " + this.money
                 + "\nHero Score: " + this.HeroScore);

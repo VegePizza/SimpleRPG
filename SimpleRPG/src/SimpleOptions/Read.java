@@ -15,7 +15,7 @@ public class Read extends Hero{
         
         //user input decide which option seleceted
         switch (this.performOption) {
-            //certain options locked behind obedience stat
+            //certain options locked behind strength stat
             case 1:
                 this.perform = "Basic Show";
                 Hero.money += 10;
