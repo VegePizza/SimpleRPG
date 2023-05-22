@@ -36,7 +36,7 @@ public class ChooseHero extends javax.swing.JFrame{
         jLabel3 = new javax.swing.JLabel();
         HeroNationalityText = new javax.swing.JTextField();
         HeroNameText = new javax.swing.JTextField();
-        ComfirmHeroButton = new javax.swing.JButton();
+        ConfirmHeroButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         HeroTextArea = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
@@ -91,16 +91,16 @@ public class ChooseHero extends javax.swing.JFrame{
         getContentPane().add(HeroNameText);
         HeroNameText.setBounds(140, 100, 110, 30);
 
-        ComfirmHeroButton.setBackground(new java.awt.Color(255, 255, 51));
-        ComfirmHeroButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ComfirmHeroButton.setText("Comfirm");
-        ComfirmHeroButton.addActionListener(new java.awt.event.ActionListener() {
+        ConfirmHeroButton.setBackground(new java.awt.Color(255, 255, 51));
+        ConfirmHeroButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ConfirmHeroButton.setText("Comfirm");
+        ConfirmHeroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComfirmHeroButtonActionPerformed(evt);
+                ConfirmHeroButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(ComfirmHeroButton);
-        ComfirmHeroButton.setBounds(420, 90, 110, 40);
+        getContentPane().add(ConfirmHeroButton);
+        ConfirmHeroButton.setBounds(420, 90, 110, 40);
 
         HeroTextArea.setColumns(20);
         HeroTextArea.setRows(5);
@@ -204,7 +204,7 @@ public class ChooseHero extends javax.swing.JFrame{
         // TODO add your handling code here:
     }//GEN-LAST:event_HeroNameTextActionPerformed
     //Display message pushing user to select option before continuing
-    private void AdoptHeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdoptHeroButtonActionPerformed
+    private void ConfirmHeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmHeroButtonActionPerformed
         // TODO add your handling code here:
         if ("Select Occupation".equals(CharactersComboBox.getSelectedItem().toString())){
             String text = "Please select a Hero!";
@@ -229,7 +229,7 @@ public class ChooseHero extends javax.swing.JFrame{
             ChooseHero.super.dispose();
         }
         
-    }//GEN-LAST:event_AdoptHeroButtonActionPerformed
+    }//GEN-LAST:event_ConfirmHeroButtonActionPerformed
 
     //end program
     private void EndButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EndButtonActionPerformed
@@ -297,7 +297,7 @@ public class ChooseHero extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> CharactersComboBox;
-    private javax.swing.JButton ComfirmHeroButton;
+    private javax.swing.JButton ConfirmHeroButton;
     private javax.swing.JButton EndButton;
     public javax.swing.JTextField HeroNameText;
     public javax.swing.JTextField HeroNationalityText;
