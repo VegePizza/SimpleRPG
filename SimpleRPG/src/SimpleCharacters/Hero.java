@@ -53,10 +53,10 @@ public class Hero {
     public void setStrength(int strength) {
         this.strength = strength;
     }   
-    public int getagility(){
+    public int getAgility(){
         return agility;
     }   
-    public void setagility(int agility){
+    public void setAgility(int agility){
         this.agility = agility;
     }   
     public String getHeroName() {
