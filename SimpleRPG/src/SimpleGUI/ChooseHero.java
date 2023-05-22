@@ -54,7 +54,7 @@ public class ChooseHero extends javax.swing.JFrame{
         setMinimumSize(new java.awt.Dimension(600, 570));
         getContentPane().setLayout(null);
 
-        CharactersComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"--Select Option--", "Dog", "Cat", "Rabbit" }));
+        CharactersComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Please Select","Swordsman","Wizard","Archer"}));
         CharactersComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CharactersComboBoxActionPerformed(evt);
