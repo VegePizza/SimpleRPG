@@ -1,20 +1,20 @@
 package SimpleCharacters;
 
 public class Wizard extends Hero{
-    private String nationality;
+    private String gender;
     private String name;
 
     //initialise Wizard specific stats from default values
-    public Wizard(String name, String nationality) {
+    public Wizard(String name, String gender) {
         this.name = name;
-        this.nationality = nationality;
+        this.gender = gender;
         super.hunger = 3;
         super.health = 5;
         super.strength = 7;
         super.agility = 7;
         super.intelligence = 4;
         super.heroName = name;
-        super.nationality = nationality;
+        super.gender = gender;
         super.money = 30;
     }
     
@@ -25,11 +25,11 @@ public class Wizard extends Hero{
     public void setName(String name) {
         this.name = name;
     }   
-    public String getNationality() {
-        return ("Nationality: " + nationality);
+    public String getgender() {
+        return ("gender: " + gender);
     }
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
+    public void setgender(String gender) {
+        this.gender = gender;
     }
         
 }

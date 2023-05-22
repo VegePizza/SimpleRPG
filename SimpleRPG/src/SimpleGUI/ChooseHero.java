@@ -34,7 +34,7 @@ public class ChooseHero extends javax.swing.JFrame{
         CharactersComboBox = new javax.swing.JComboBox<>();
         TitleLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        HeroNationalityText = new javax.swing.JTextField();
+        HerogenderText = new javax.swing.JTextField();
         HeroNameText = new javax.swing.JTextField();
         ConfirmHeroButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -71,17 +71,17 @@ public class ChooseHero extends javax.swing.JFrame{
         TitleLabel1.setBounds(50, 20, 150, 30);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Nationality:");
+        jLabel3.setText("gender:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(40, 140, 90, 30);
 
-        HeroNationalityText.addActionListener(new java.awt.event.ActionListener() {
+        HerogenderText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HeroNationalityTextActionPerformed(evt);
+                HerogenderTextActionPerformed(evt);
             }
         });
-        getContentPane().add(HeroNationalityText);
-        HeroNationalityText.setBounds(140, 140, 110, 30);
+        getContentPane().add(HerogenderText);
+        HerogenderText.setBounds(140, 140, 110, 30);
 
         HeroNameText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,36 +169,36 @@ public class ChooseHero extends javax.swing.JFrame{
         if("Swordsman".equals(CharactersComboBox.getSelectedItem().toString())){
             HeroTextArea.setText("");
             String nameSwordsman = HeroNameText.getText().trim();
-            String nationalitySwordsman = HeroNationalityText.getText().trim();
+            String genderSwordsman = HerogenderText.getText().trim();
 
-            ChooseHero.Hero = new Swordsman(nameSwordsman, nationalitySwordsman);
+            ChooseHero.Hero = new Swordsman(nameSwordsman, genderSwordsman);
             HeroStatsArea.setText("\n" + Hero.printInfo());
             ChooseHero.HeroText = this.HeroTextArea.getText();
         }
         if("Wizard".equals(CharactersComboBox.getSelectedItem().toString())){
             HeroTextArea.setText("");
             String nameWizard = HeroNameText.getText().trim();
-            String nationalityWizard = HeroNationalityText.getText().trim();
+            String genderWizard = HerogenderText.getText().trim();
 
-            ChooseHero.Hero = new Wizard(nameWizard, nationalityWizard);
+            ChooseHero.Hero = new Wizard(nameWizard, genderWizard);
             HeroStatsArea.setText("\n" + Hero.printInfo());
             ChooseHero.HeroText = this.HeroTextArea.getText();
         }
         if("Archer".equals(CharactersComboBox.getSelectedItem().toString())){
             HeroTextArea.setText("");
             String nameArcher = HeroNameText.getText().trim();
-            String nationalityArcher = HeroNationalityText.getText().trim();
+            String genderArcher = HerogenderText.getText().trim();
 
-            ChooseHero.Hero = new Archer(nameArcher, nationalityArcher);
+            ChooseHero.Hero = new Archer(nameArcher, genderArcher);
             HeroStatsArea.setText("\n" + Hero.printInfo());
             ChooseHero.HeroText = this.HeroTextArea.getText();
         }
 
     }//GEN-LAST:event_CharactersComboBoxActionPerformed
 
-    private void HeroNationalityTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroNationalityTextActionPerformed
+    private void HerogenderTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HerogenderTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HeroNationalityTextActionPerformed
+    }//GEN-LAST:event_HerogenderTextActionPerformed
 
     private void HeroNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroNameTextActionPerformed
         // TODO add your handling code here:
@@ -212,18 +212,18 @@ public class ChooseHero extends javax.swing.JFrame{
         }else if ("".equals(HeroNameText.getText())){
             String text = "Please enter a name!";
             HeroStatsArea.setText(text);      
-        }else if ("".equals(HeroNationalityText.getText())){
-            String text = "Please enter a nationality!";
+        }else if ("".equals(HerogenderText.getText())){
+            String text = "Please enter a gender!";
             HeroStatsArea.setText(text);      
-        }else if ("".equals(HeroNameText.getText()) && "".equals(HeroNationalityText.getText())){
-            String text = "Please enter a name and nationality!";
+        }else if ("".equals(HeroNameText.getText()) && "".equals(HerogenderText.getText())){
+            String text = "Please enter a name and gender!";
             HeroStatsArea.setText(text);      
         }else {
-            Hero.setheroName(HeroNameText.getText());
-            Hero.setColour(HeroNationalityText.getText());
+            Hero.setHeroName(HeroNameText.getText());
+            Hero.setGender(HerogenderText.getText());
             HeroTextArea.append("\nYour Hero details:");
-            HeroTextArea.append("\nName: " + Hero.getheroName());
-            HeroTextArea.append("\nNationality: " + Hero.getColour());
+            HeroTextArea.append("\nName: " + Hero.getHeroName());
+            HeroTextArea.append("\ngender: " + Hero.getGender());
             ChooseHero.HeroText = this.HeroTextArea.getText();
             new HeroActions().setVisible(true);
             ChooseHero.super.dispose();
@@ -300,7 +300,7 @@ public class ChooseHero extends javax.swing.JFrame{
     private javax.swing.JButton ConfirmHeroButton;
     private javax.swing.JButton EndButton;
     public javax.swing.JTextField HeroNameText;
-    public javax.swing.JTextField HeroNationalityText;
+    public javax.swing.JTextField HerogenderText;
     private javax.swing.JTextArea HeroStatsArea;
     private javax.swing.JTextArea HeroTextArea;
     private javax.swing.JButton RestartButton;

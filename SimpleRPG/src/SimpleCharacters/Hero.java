@@ -3,7 +3,7 @@ package SimpleCharacters;
 public class Hero {
    
     public String heroName;
-    public String nationality;
+    public String gender;
     public int health;
     public int hunger;
     public int strength;
@@ -15,7 +15,7 @@ public class Hero {
     //initialise all variable statistics for hero
     public Hero(){
         this.heroName = "";
-        this.nationality = "";
+        this.gender = "";
         this.health = 0;
         this.hunger = 0;
         this.agility = 0;
@@ -26,11 +26,11 @@ public class Hero {
     }
 
     //getters and setters for above stats
-    public String getColour() {
-        return nationality;
+    public String getGender() {
+        return gender;
     }
-    public void setColour(String nationality) {
-        this.nationality = nationality;
+    public void setGender(String gender) {
+        this.gender = gender;
     }    
     public int getHeroScore() {
         return HeroScore;
@@ -59,10 +59,10 @@ public class Hero {
     public void setagility(int agility){
         this.agility = agility;
     }   
-    public String getheroName() {
+    public String getHeroName() {
         return this.heroName;
     }    
-    public void setheroName(String heroName){
+    public void setHeroName(String heroName){
         this.heroName = heroName;
     }   
     public int getIntelligence() {
@@ -196,7 +196,7 @@ public class Hero {
         String HeroReport = ("\n" + "Hero report card for " + this.heroName
                 + "\nHero details: \n"
                 + "Health: " + this.health
-                + "\nNationality: " + this.nationality
+                + "\ngender: " + this.gender
                 + "\nHunger: " + this.hunger
                 + "\nStrength: " + this.strength
                 + "\nagility: " + this.agility
