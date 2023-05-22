@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 import java.util.concurrent.TimeUnit;
 import java.util.Random;

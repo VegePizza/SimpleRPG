@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // The Drawing class handles the display of ASCII Art.
 public class Drawing {

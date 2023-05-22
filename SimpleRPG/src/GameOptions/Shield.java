@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // Shield class representing a shield object.
 public class Shield {

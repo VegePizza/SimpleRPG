@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // The Swordsman class extends the Hero class, 
 // it inherits all of its variables and methods.

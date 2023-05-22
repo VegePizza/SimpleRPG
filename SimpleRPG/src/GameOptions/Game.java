@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 import java.io.*;
 import java.util.HashMap;

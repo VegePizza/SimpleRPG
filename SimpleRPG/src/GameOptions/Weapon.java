@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // Weapon class representing a weapon object.
 public class Weapon {

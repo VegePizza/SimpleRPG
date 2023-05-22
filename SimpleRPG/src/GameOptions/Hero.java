@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // Hero is an abstract class that serves as a blueprint for specific hero types 
 // (e.g., Swordsman, Wizard, Archer).

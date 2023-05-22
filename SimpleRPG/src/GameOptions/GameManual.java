@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // The GameManual class handles the display of the game manual.
 public class GameManual {

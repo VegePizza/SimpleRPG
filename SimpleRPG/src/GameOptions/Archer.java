@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // The Archer class extends the Hero class.
 public class Archer extends Hero {

@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 // The Wizard class extends the Hero class.
 public class Wizard extends Hero {

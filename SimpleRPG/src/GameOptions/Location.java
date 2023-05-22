@@ -1,4 +1,4 @@
-package SimpleRPG;
+package GameOptions;
 
 import java.util.ArrayList;
 import java.util.List;
