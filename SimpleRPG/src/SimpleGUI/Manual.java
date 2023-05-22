@@ -1,12 +1,10 @@
-package SimpleRPG;
+package SimpleGUI;
 
-// The GameManual class handles the display of the game manual.
-public class GameManual {
+public class Manual{
     
-    // This method prints out the game manual.
-    public static void printGameManual() {
-        
-        System.out.println("        ***** Welcome to the SimpleRPG game *****\n"
+    //Game manual when called explains to user the basics of the game
+    public static void main(){
+        String text = ("        ***** Welcome to the SimpleRPG game *****\n"
                 + "In this game, you will create a hero and embark on a journey to\n"
                 + "explore various locations and fight against a range of enemies.\n"
                 + "\n"
@@ -28,5 +26,10 @@ public class GameManual {
                 + "*** Winning & Losing conditions ***\n" 
                 + "- Your hero's health drops to 0 or below, game over.\n" 
                 + "- Your hero reaches level 100, and you win the game.\n");
-        }
+      
+        new GUI("Game Manual", text);
+        
+    }
+
+    
 }
