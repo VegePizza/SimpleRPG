@@ -17,6 +17,8 @@ public class Hero {
     private int intelligence;
     private int agility;
     private int gold;
+    private int stamina;
+    private int experience;
 
     public Hero() {
         this.name = "";
@@ -25,6 +27,8 @@ public class Hero {
         this.intelligence = 10;
         this.agility = 10;
         this.gold = 50;
+        this.stamina = 100;
+        this.experience = 0;
     }
 
     // Getters and setters
@@ -63,6 +67,21 @@ public class Hero {
     }
     public void setGold(int gold) {
         this.gold = gold;
+    }
+    public int getStamina() {
+        return stamina;
+    }
+
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
     }
     
     // Prints out hero's stats
