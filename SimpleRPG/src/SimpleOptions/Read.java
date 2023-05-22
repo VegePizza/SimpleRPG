@@ -23,8 +23,8 @@ public class Read extends Hero{
                 this.performHunger = 3;
                 break;
             case 2:
-                if(Hero.getObedience() < 10){
-                    this.perform = ("N/A. " + Hero.animalName + " needs more training!");
+                if(Hero.getStrength() < 10){
+                    this.perform = ("N/A. " + Hero.heroName + " needs more training!");
                     this.performOption = 0;
                     break;
                 }
@@ -34,8 +34,8 @@ public class Read extends Hero{
                 this.performHunger = 2;
                 break;
             case 3:
-                if(Hero.getObedience() < 20){
-                    this.perform = ("N/A. " + Hero.animalName + " needs more training!");
+                if(Hero.getStrength() < 20){
+                    this.perform = ("N/A. " + Hero.heroName + " needs more training!");
                     this.performOption = 0;
                     break;
                 }
@@ -79,7 +79,7 @@ public class Read extends Hero{
    
     //output stats effected by perform method
     public String performHero(){
-        String performText = ("You and " + Hero.animalName + " Perform: " + perform
+        String performText = ("You and " + Hero.heroName + " Perform: " + perform
                     + "\nMoney increased by: " + performOption*10 + "\nMoney: " + Hero.money
                     + "\nHunger increased by: " + this.performHunger + "\nHunger: " + Hero.hunger);
         return performText;

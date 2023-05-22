@@ -23,7 +23,7 @@ public class HeroActions extends JFrame{
         this.HeroTextArea.setText(HeroText);
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
-        HeroGameArea.setText("What would you like to feed " + Hero.animalName
+        HeroGameArea.setText("What would you like to feed " + Hero.heroName
                 + "\nOptions are:\n"
                 + "1. Basic Food: $2\n"
                 + "2. Intermediate Food: $4\n"
@@ -264,7 +264,7 @@ public class HeroActions extends JFrame{
         Option2.setSelected(false);
         HeroGameArea.append(Hero.checkagility(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
-        HeroGameArea.append(Hero.checkHappiness(Hero));
+        HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
         if (Hero.health >= 40){
@@ -313,7 +313,7 @@ public class HeroActions extends JFrame{
         Option3.setSelected(false);
         HeroGameArea.append(Hero.checkagility(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
-        HeroGameArea.append(Hero.checkHappiness(Hero));
+        HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
         if (Hero.health >= 40){
@@ -362,7 +362,7 @@ public class HeroActions extends JFrame{
         Option3.setSelected(false);
         HeroGameArea.append(Hero.checkagility(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
-        HeroGameArea.append(Hero.checkHappiness(Hero));
+        HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
         if (Hero.health >= 40){
@@ -381,35 +381,35 @@ public class HeroActions extends JFrame{
         Option2.setSelected(false);
         Option3.setSelected(false);
         if("Heal".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("What would you like to feed " + Hero.animalName
+            HeroGameArea.setText("What would you like to feed " + Hero.heroName
                 + "\nOptions are:\n"
                 + "1. Basic Food: $2\n"
                 + "2. Intermediate Food: $4\n"
                 + "3. Luxury Food: $6");
         }
         if("Clean".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("How would you like to Clean " + Hero.animalName
+            HeroGameArea.setText("How would you like to Clean " + Hero.heroName
                 + "\nOptions are:\n"
                 + "1. Basic Cleaning\n"
                 + "2. Intermediate Cleaning\n"
                 + "3. Luxury Cleaning");
         }
         if("Play".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("How would you like to Play with " + Hero.animalName
+            HeroGameArea.setText("How would you like to Play with " + Hero.heroName
                 + "\nOptions are:\n"
                 + "1. Basic Fun\n"
                 + "2. Intermediate Fun\n"
                 + "3. Luxury Fun");
         }
         if("Train".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("How would you like to Train " + Hero.animalName
+            HeroGameArea.setText("How would you like to Train " + Hero.heroName
                 + "\nOptions are:\n"
                 + "1. Basic Training\n"
                 + "2. Intermediate Training\n"
                 + "3. Luxury Training");
         }
         if("Perform".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("What act would you and " + Hero.animalName + " like to perform"
+            HeroGameArea.setText("What act would you and " + Hero.heroName + " like to perform"
                 + "\nOptions are:\n"
                 + "1. Basic Show\n"
                 + "2. Intermediate Show\n"

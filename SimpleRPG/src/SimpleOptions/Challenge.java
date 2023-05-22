@@ -6,7 +6,7 @@ public class Challenge extends Hero{
     private Hero Hero;
     private int cleaningOption;
     private String clean;
-    private int cleanHappiness;
+    private int cleanHealth;
 
     //Clean method affects agility stats depending on user input
     public Challenge(Hero Hero, int cleaningOption){
@@ -25,7 +25,7 @@ public class Challenge extends Hero{
                 Hero.health -= 3;
                 Hero.agility += 1;
                 Hero.money -= 2;
-                this.cleanHappiness = 3;
+                this.cleanHealth = 3;
                 break;
             case 2:
                 if(Hero.getMoney()< 4){
@@ -37,7 +37,7 @@ public class Challenge extends Hero{
                 Hero.health -= 2;
                 Hero.agility += 2;
                 Hero.money -= 4;
-                this.cleanHappiness = 2;
+                this.cleanHealth = 2;
                 break;
             case 3:
                 if(Hero.getMoney()< 6){
@@ -49,21 +49,21 @@ public class Challenge extends Hero{
                 Hero.health -= 1;
                 Hero.agility += 3;
                 Hero.money -= 6;
-                this.cleanHappiness = 1;
+                this.cleanHealth = 1;
                 break;
             default:
                 this.cleaningOption = 0;
-                this.cleanHappiness = 0;
+                this.cleanHealth = 0;
                 break;
         }
     }
     
     //getters and setters
-    public int getCleanHappiness() {
-        return cleanHappiness;
+    public int getCleanHealth() {
+        return cleanHealth;
     }
-    public void setCleanHappiness(int cleanHappiness) {
-        this.cleanHappiness = cleanHappiness;
+    public void setCleanHealth(int cleanHealth) {
+        this.cleanHealth = cleanHealth;
     }
     public Hero getHero(){
         return Hero;
@@ -87,7 +87,7 @@ public class Challenge extends Hero{
     //output to user the effects of clean
     public String cleanHero(){
         String cleanText = ("Hero has been given a " + clean
-                        + "\nHero health is decreased by "+ this.cleanHappiness + "\nHappiness: " + Hero.health
+                        + "\nHero health is decreased by "+ this.cleanHealth + "\nHealth: " + Hero.health
                         + "\nHero agility is increased by " + cleaningOption + "\nagility: " + Hero.agility
                         + "\nMoney is decreased by " + cleaningOption*2 + "\nMoney: " + Hero.getMoney());
         return cleanText;

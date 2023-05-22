@@ -80,7 +80,7 @@ public class Adventure extends Hero{
     //output to user the effects of Play
     public String playHero(){
         String playText = ("Hero has been given " + activity
-                       + "\nHero Happiness is increased by " + playOption*3 + "\nHappiness: " + Hero.health
+                       + "\nHero Health is increased by " + playOption*3 + "\nHealth: " + Hero.health
                        + "\nHero Hunger is increased by " + this.playHunger + "\nHunger: " + Hero.hunger
                        + "\nHero agility is decreased by " + this.playagility + "\nagility: " + Hero.agility);
         return playText;

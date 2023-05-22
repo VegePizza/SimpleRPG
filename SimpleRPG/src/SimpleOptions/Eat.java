@@ -91,7 +91,7 @@ public class Eat extends Hero{
     //output to user effects of feed method
     public String feedHero(){
         String feedText = ("Hero is fed " + getFood() 
-                        + "\nHero Happiness is increased by " + getFoodOption() + "\nHappiness: " + getHero().health
+                        + "\nHero Health is increased by " + getFoodOption() + "\nHealth: " + getHero().health
                         + "\nHero Hunger is decreased by " + getFoodOption() + "\nHunger: " + getHero().hunger
                         + "\nHero agility is decreased by " + getFoodagility() + "\nagility: " + getHero().agility
                         + "\nMoney is decreased by " + getFoodOption()*2 + "\nMoney: " + getHero().money);

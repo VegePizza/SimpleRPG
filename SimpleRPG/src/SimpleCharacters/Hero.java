@@ -2,7 +2,7 @@ package SimpleCharacters;
 
 public class Hero {
    
-    public String animalName;
+    public String heroName;
     public String nationality;
     public int health;
     public int hunger;
@@ -12,9 +12,9 @@ public class Hero {
     public int money;
     public int HeroScore;
     
-    //initialise all variable statistics for animal
+    //initialise all variable statistics for hero
     public Hero(){
-        this.animalName = "";
+        this.heroName = "";
         this.nationality = "";
         this.health = 0;
         this.hunger = 0;
@@ -35,10 +35,10 @@ public class Hero {
     public int getHeroScore() {
         return HeroScore;
     }    
-    public int getHappiness() {
+    public int getHealth() {
         return health;
     }
-    public void setHappiness(int health) {
+    public void setHealth(int health) {
         this.health = health;
     }
     public int getHunger() {
@@ -47,10 +47,10 @@ public class Hero {
     public void setHunger(int hunger) {
         this.hunger = hunger;
     }
-    public int getObedience() {
+    public int getStrength() {
         return strength;
     }
-    public void setObedience(int strength) {
+    public void setStrength(int strength) {
         this.strength = strength;
     }   
     public int getagility(){
@@ -59,11 +59,11 @@ public class Hero {
     public void setagility(int agility){
         this.agility = agility;
     }   
-    public String getanimalName() {
-        return this.animalName;
+    public String getheroName() {
+        return this.heroName;
     }    
-    public void setanimalName(String animalName){
-        this.animalName = animalName;
+    public void setheroName(String heroName){
+        this.heroName = heroName;
     }   
     public int getIntelligence() {
         return intelligence;
@@ -80,10 +80,10 @@ public class Hero {
     
     //Prints out Hero's stats
     public String printInfo() {
-        String HeroStats = (this.animalName + " Stats:"
+        String HeroStats = (this.heroName + " Stats:"
                 + "\nHunger: " + this.hunger
-                + "\nHappiness: " + this.health
-                + "\nObedience: " + this.strength
+                + "\nHealth: " + this.health
+                + "\nStrength: " + this.strength
                 + "\nagility: " + this.agility
                 + "\nIntelligence: " + this.intelligence
                 + "\nMoney: " + this.money);
@@ -97,25 +97,25 @@ public class Hero {
      * @param Hero
      * @return
      */
-    public String checkHappiness(Hero Hero) {
+    public String checkHealth(Hero Hero) {
         Hero.health = health;
         String healthText = "";
 
         if(health >= 1 && health < 10)
         {
-            healthText = ("\n" + this.animalName + " is not very happy\n");
+            healthText = ("\n" + this.heroName + " is not very happy\n");
         }
         else if(health >= 10 && health < 20)
         {
-            healthText = ("\n" + this.animalName + " is happy!\n");
+            healthText = ("\n" + this.heroName + " is happy!\n");
         }
         else if(health >= 20 && health < 30)
         {
-            healthText = ("\n" + this.animalName + " is very happy!\n");
+            healthText = ("\n" + this.heroName + " is very happy!\n");
         }
         else if(health >= 30 && health < 40)
         {
-            healthText = ("\n" + this.animalName + " is extremely happy!\n");
+            healthText = ("\n" + this.heroName + " is extremely happy!\n");
         }
         this.HeroScore = this.health + this.hunger + this.agility + this.intelligence
                 + this.money + this.strength;
@@ -131,36 +131,36 @@ public class Hero {
             Hero.agility = 0;
             if(Hero.health <= 0){
                Hero.health = 0;
-               agilityText = ("\n" + Hero.animalName + " is Dirty!"
-                            + "\nHappiness and Obedience decreased by 5"
-                            + "\nHappiness cannot be below zero"
+               agilityText = ("\n" + Hero.heroName + " is Dirty!"
+                            + "\nHealth and Strength decreased by 5"
+                            + "\nHealth cannot be below zero"
                             + "\nagility cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nHealth: " + Hero.health + "\nStrength: " + Hero.strength
                             + "\nagility: " + Hero.agility);
             }
             if(Hero.strength <= 0){
                 Hero.strength = 0;
-                agilityText = ("\n" + Hero.animalName + " is Dirty!"
-                            + "\nHappiness and Obedience decreased by 5"
-                            + "\nObedience cannot be below zero"
+                agilityText = ("\n" + Hero.heroName + " is Dirty!"
+                            + "\nHealth and Strength decreased by 5"
+                            + "\nStrength cannot be below zero"
                             + "\nagility cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nHealth: " + Hero.health + "\nStrength: " + Hero.strength
                             + "\nagility: " + Hero.agility);
             }
             if(Hero.health <= 0 && Hero.strength <= 0){
                Hero.health = 0;
                Hero.strength = 0;
-               agilityText = ("\n" + Hero.animalName + " is Dirty!"
-                            + "\nHappiness and Obedience decreased by 5"
-                            + "\nHappiness and Obedience cannot be below zero"
+               agilityText = ("\n" + Hero.heroName + " is Dirty!"
+                            + "\nHealth and Strength decreased by 5"
+                            + "\nHealth and Strength cannot be below zero"
                             + "\nagility cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nHealth: " + Hero.health + "\nStrength: " + Hero.strength
                             + "\nagility: " + Hero.agility);
             }else{
-            agilityText = ("\n" + Hero.animalName + " is Dirty!"
-                            + "\nHappiness and Obedience decreased by 5"
+            agilityText = ("\n" + Hero.heroName + " is Dirty!"
+                            + "\nHealth and Strength decreased by 5"
                             + "\nagility cannot be below zero"
-                            + "\nHappiness: " + Hero.health + "\nObedience: " + Hero.strength
+                            + "\nHealth: " + Hero.health + "\nStrength: " + Hero.strength
                             + "\nagility: " + Hero.agility);
             }
         }
@@ -174,14 +174,14 @@ public class Hero {
             Hero.health -= 10;
             if(Hero.health <= 0){
                 Hero.health = 0;
-                hungerText = ("\n" + Hero.animalName + " is very hungry!"
-                        + "\nHero Happiness is decreased by 10"
-                        + "\nHappiness cannot be below zero"
-                        + "\nHappiness: " + Hero.health);
+                hungerText = ("\n" + Hero.heroName + " is very hungry!"
+                        + "\nHero Health is decreased by 10"
+                        + "\nHealth cannot be below zero"
+                        + "\nHealth: " + Hero.health);
             }else{
-            hungerText = ("\n" + Hero.animalName + " is very hungry!"
-                        + "\nHero Happiness is decreased by 10"
-                        + "\nHappiness: " + Hero.health);
+            hungerText = ("\n" + Hero.heroName + " is very hungry!"
+                        + "\nHero Health is decreased by 10"
+                        + "\nHealth: " + Hero.health);
             }
         }if (Hero.hunger <= 0){
             Hero.hunger = 0;
@@ -191,14 +191,14 @@ public class Hero {
         return hungerText;
     }
     
-    //Write to file and print to user, animal stat information
+    //Write to file and print to user, hero stat information
     public String printReportCard(){
-        String HeroReport = ("\n" + "Hero report card for " + this.animalName
+        String HeroReport = ("\n" + "Hero report card for " + this.heroName
                 + "\nHero details: \n"
-                + "Happiness: " + this.health
+                + "Health: " + this.health
                 + "\nNationality: " + this.nationality
                 + "\nHunger: " + this.hunger
-                + "\nObedience: " + this.strength
+                + "\nStrength: " + this.strength
                 + "\nagility: " + this.agility
                 + "\nIntelligence: " + this.intelligence
                 + "\nMoney: " + this.money

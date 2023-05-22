@@ -13,7 +13,7 @@ public class Wizard extends Hero{
         super.strength = 7;
         super.agility = 7;
         super.intelligence = 4;
-        super.animalName = name;
+        super.heroName = name;
         super.nationality = nationality;
         super.money = 30;
     }

@@ -89,8 +89,8 @@ public class Train extends Hero{
     //output to user effects of train
     public String trainHero(){
         String trainText = ("Hero has been given " + train
-                        + "\nHero Happiness is increased by " + trainOption + "\nHappiness: " + Hero.health
-                        + "\nHero Obedience is increased by " + trainOption + "\nObedience: " + Hero.strength
+                        + "\nHero Health is increased by " + trainOption + "\nHealth: " + Hero.health
+                        + "\nHero Strength is increased by " + trainOption + "\nStrength: " + Hero.strength
                         + "\nHero Hunger is increased by " + this.trainHunger + "\nHunger: " + Hero.hunger
                         + "\nHero agility is decreased by " + this.trainagility + "\nagility: " + Hero.agility);
         return trainText;

@@ -12,7 +12,7 @@ public class Ending {
     //shows happy ending text
     public static void goodGame() {
         PlayerScoresMain.main();
-        String goodEnding = ("\nPlayer: " + player.getUsername() + "  Score: " + Hero.getHeroScore() + "\n\nCongralutations! " + Hero.animalName + " is at maximum health!"
+        String goodEnding = ("\nPlayer: " + player.getUsername() + "  Score: " + Hero.getHeroScore() + "\n\nCongralutations! " + Hero.heroName + " is at maximum health!"
                    + "\nWell done, you have completed the game!\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
@@ -24,8 +24,8 @@ public class Ending {
     public static void badGame() {
         PlayerScoresMain.main();
         String badEnding = ("\nPlayer: " + player.getUsername() + "  Score: " + Hero.getHeroScore() 
-                   + "\n\nSorry! " + Hero.animalName + " is not happy at all!"
-                   + "\nToo bad " + Hero.animalName + " has decided to run away...\n"
+                   + "\n\nSorry! " + Hero.heroName + " is not happy at all!"
+                   + "\nToo bad " + Hero.heroName + " has decided to run away...\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
         GUI g = new GUI();

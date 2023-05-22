@@ -13,7 +13,7 @@ public class Archer extends Hero{
         super.strength = 7;
         super.agility = 7;
         super.intelligence = 1;
-        super.animalName = name;
+        super.heroName = name;
         super.nationality = nationality;
         super.money = 30;
     }

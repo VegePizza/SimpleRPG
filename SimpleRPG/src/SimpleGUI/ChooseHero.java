@@ -163,7 +163,7 @@ public class ChooseHero extends javax.swing.JFrame{
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    //Retrieves animal info depending on user selection
+    //Retrieves hero info depending on user selection
     private void CharactersComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CharactersComboBoxActionPerformed
 
         if("Swordsman".equals(CharactersComboBox.getSelectedItem().toString())){
@@ -219,10 +219,10 @@ public class ChooseHero extends javax.swing.JFrame{
             String text = "Please enter a name and nationality!";
             HeroStatsArea.setText(text);      
         }else {
-            Hero.setanimalName(HeroNameText.getText());
+            Hero.setheroName(HeroNameText.getText());
             Hero.setColour(HeroNationalityText.getText());
             HeroTextArea.append("\nYour Hero details:");
-            HeroTextArea.append("\nName: " + Hero.getanimalName());
+            HeroTextArea.append("\nName: " + Hero.getheroName());
             HeroTextArea.append("\nNationality: " + Hero.getColour());
             ChooseHero.HeroText = this.HeroTextArea.getText();
             new HeroActions().setVisible(true);
