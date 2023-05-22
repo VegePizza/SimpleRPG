@@ -15,8 +15,6 @@ public class Panel extends JPanel{
 
     /**
      * Draw the background of this panel.
-     *
-     * @param g
      */
     @Override
     public void paintComponent(Graphics g) {
