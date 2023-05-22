@@ -87,7 +87,7 @@ public class SimpleIntroPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GameManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GameManualActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "This is your game manual. It would contain instructions about how to play the game.");
     }//GEN-LAST:event_GameManualActionPerformed
 
     /**
