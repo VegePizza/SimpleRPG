@@ -9,13 +9,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class GUI extends JFrame implements ActionListener {
+public class MainWindow extends JFrame implements ActionListener {
 
-    public GUI() throws HeadlessException {
+    public MainWindow() throws HeadlessException {
     }
     
     //Default GUI
-    public GUI(String title, String text) {
+    public MainWindow(String title, String text) {
         this.add(new Panel(text));
         this.setTitle(title);
         this.setSize(400,400);
@@ -35,7 +35,7 @@ public class GUI extends JFrame implements ActionListener {
     }
     
     //GUI for showing player scores
-    GUI(String players_Scores, PlayerReport user) {
+    MainWindow(String players_Scores, PlayerReport user) {
         this.add(new Panel(user));
         this.setTitle(players_Scores);
         this.setSize(400,400);
@@ -79,7 +79,7 @@ public class GUI extends JFrame implements ActionListener {
         this.add(restartButton, BorderLayout.NORTH);
         restartButton.addActionListener((ActionEvent e) -> {
             this.dispose();
-            new IntroductionFrame().setVisible(true);
+            new FirstMainFrame().setVisible(true);
         });
     }
 

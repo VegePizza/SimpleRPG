@@ -7,7 +7,7 @@ import SimpleOptions.Eat;
 import SimpleOptions.Challenge;
 import static SimpleGUI.ChooseHero.Hero;
 import static SimpleGUI.ChooseHero.HeroText;
-import static SimpleGUI.IntroductionFrame.player;
+import static SimpleGUI.FirstMainFrame.player;
 import javax.swing.JFrame;
 
 //third frame
@@ -421,7 +421,7 @@ public class HeroActions extends JFrame{
     private void RestartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestartButtonActionPerformed
         // TODO add your handling code here:
         HeroActions.super.dispose();
-        new IntroductionFrame().setVisible(true);
+        new FirstMainFrame().setVisible(true);
     }//GEN-LAST:event_RestartButtonActionPerformed
 
     //ends program

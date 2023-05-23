@@ -4,7 +4,7 @@ import static SimpleDatabase.PlayerScores.highestScore;
 import SimpleDatabase.PlayerScoresMain;
 import static SimpleDatabase.PlayerScoresMain.scoresText;
 import static SimpleGUI.ChooseHero.Hero;
-import static SimpleGUI.IntroductionFrame.player;
+import static SimpleGUI.FirstMainFrame.player;
 import java.util.Arrays;
 
 public class Ending {
@@ -16,7 +16,7 @@ public class Ending {
                    + "\nWell done, you have completed the game!\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
-        GUI g = new GUI();
+        MainWindow g = new MainWindow();
         g.GUIend("Good Game", goodEnding);
     }
     
@@ -28,7 +28,7 @@ public class Ending {
                    + "\nToo bad " + Hero.heroName + " has decided to run away...\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
-        GUI g = new GUI();
+        MainWindow g = new MainWindow();
         g.GUIend("Bad Game", badEnding); 
     }
     

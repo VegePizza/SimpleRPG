@@ -31,19 +31,19 @@ public class ChooseHero extends javax.swing.JFrame{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CharactersComboBox = new javax.swing.JComboBox<>();
-        TitleLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        HerogenderText = new javax.swing.JTextField();
+        EndButton = new javax.swing.JButton();
+        TitleLabel1 = new javax.swing.JLabel();
+        HeroGenderText = new javax.swing.JTextField();
         HeroNameText = new javax.swing.JTextField();
-        ConfirmHeroButton = new javax.swing.JButton();
+        RestartButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         HeroTextArea = new javax.swing.JTextArea();
-        jLabel4 = new javax.swing.JLabel();
-        EndButton = new javax.swing.JButton();
         questionLabel = new javax.swing.JLabel();
+        ComfirmHeroButton = new javax.swing.JButton();
+        CharactersComboBox = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        RestartButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         HeroStatsArea = new javax.swing.JTextArea();
@@ -54,62 +54,10 @@ public class ChooseHero extends javax.swing.JFrame{
         setMinimumSize(new java.awt.Dimension(600, 570));
         getContentPane().setLayout(null);
 
-        CharactersComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Please Select","Swordsman","Wizard","Archer"}));
-        CharactersComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CharactersComboBoxActionPerformed(evt);
-            }
-        });
-        getContentPane().add(CharactersComboBox);
-        CharactersComboBox.setBounds(176, 62, 120, 23);
-
-        TitleLabel1.setBackground(new java.awt.Color(255, 255, 0));
-        TitleLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
-        TitleLabel1.setText("Choose Your Hero");
-        TitleLabel1.setOpaque(true);
-        getContentPane().add(TitleLabel1);
-        TitleLabel1.setBounds(50, 20, 150, 30);
-
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("gender:");
+        jLabel3.setText("Gender:");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(40, 140, 90, 30);
-
-        HerogenderText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HerogenderTextActionPerformed(evt);
-            }
-        });
-        getContentPane().add(HerogenderText);
-        HerogenderText.setBounds(140, 140, 110, 30);
-
-        HeroNameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HeroNameTextActionPerformed(evt);
-            }
-        });
-        getContentPane().add(HeroNameText);
-        HeroNameText.setBounds(140, 100, 110, 30);
-
-        ConfirmHeroButton.setBackground(new java.awt.Color(255, 255, 51));
-        ConfirmHeroButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        ConfirmHeroButton.setText("Comfirm");
-        ConfirmHeroButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmHeroButtonActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ConfirmHeroButton);
-        ConfirmHeroButton.setBounds(420, 90, 110, 40);
-
-        HeroTextArea.setColumns(20);
-        HeroTextArea.setRows(5);
-        jScrollPane2.setViewportView(HeroTextArea);
-
-        getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(40, 180, 244, 212);
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(271, 198, 0, 0);
 
         EndButton.setBackground(new java.awt.Color(255, 255, 0));
         EndButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -120,17 +68,30 @@ public class ChooseHero extends javax.swing.JFrame{
             }
         });
         getContentPane().add(EndButton);
-        EndButton.setBounds(490, 20, 70, 30);
+        EndButton.setBounds(340, 420, 80, 30);
 
-        questionLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        questionLabel.setText("Hero's Occupation");
-        getContentPane().add(questionLabel);
-        questionLabel.setBounds(40, 60, 125, 30);
+        TitleLabel1.setBackground(new java.awt.Color(255, 255, 0));
+        TitleLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 14)); // NOI18N
+        TitleLabel1.setText("Choose Your Hero");
+        TitleLabel1.setOpaque(true);
+        getContentPane().add(TitleLabel1);
+        TitleLabel1.setBounds(250, 20, 150, 30);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Hero Name:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 110, 100, 17);
+        HeroGenderText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HeroGenderTextActionPerformed(evt);
+            }
+        });
+        getContentPane().add(HeroGenderText);
+        HeroGenderText.setBounds(140, 140, 110, 30);
+
+        HeroNameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HeroNameTextActionPerformed(evt);
+            }
+        });
+        getContentPane().add(HeroNameText);
+        HeroNameText.setBounds(140, 100, 110, 30);
 
         RestartButton.setBackground(new java.awt.Color(255, 255, 0));
         RestartButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -141,7 +102,46 @@ public class ChooseHero extends javax.swing.JFrame{
             }
         });
         getContentPane().add(RestartButton);
-        RestartButton.setBounds(400, 20, 80, 30);
+        RestartButton.setBounds(210, 420, 80, 30);
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(271, 198, 0, 0);
+
+        HeroTextArea.setColumns(20);
+        HeroTextArea.setRows(5);
+        jScrollPane2.setViewportView(HeroTextArea);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(50, 200, 244, 212);
+
+        questionLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        questionLabel.setText("Occupation:");
+        getContentPane().add(questionLabel);
+        questionLabel.setBounds(40, 60, 90, 30);
+
+        ComfirmHeroButton.setBackground(new java.awt.Color(255, 255, 51));
+        ComfirmHeroButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        ComfirmHeroButton.setText("Comfirm");
+        ComfirmHeroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmHeroButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ComfirmHeroButton);
+        ComfirmHeroButton.setBounds(350, 130, 110, 40);
+
+        CharactersComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Please Select", "Swordsman", "Wizard", "Archer" }));
+        CharactersComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CharactersComboBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(CharactersComboBox);
+        CharactersComboBox.setBounds(150, 60, 120, 23);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("Hero Name:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 110, 100, 17);
 
         jPanel1.setLayout(null);
 
@@ -150,7 +150,7 @@ public class ChooseHero extends javax.swing.JFrame{
         jScrollPane4.setViewportView(HeroStatsArea);
 
         jPanel1.add(jScrollPane4);
-        jScrollPane4.setBounds(310, 180, 250, 212);
+        jScrollPane4.setBounds(350, 200, 250, 212);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/HeroSelectBG.png"))); // NOI18N
         jLabel1.setOpaque(true);
@@ -169,7 +169,7 @@ public class ChooseHero extends javax.swing.JFrame{
         if("Swordsman".equals(CharactersComboBox.getSelectedItem().toString())){
             HeroTextArea.setText("");
             String nameSwordsman = HeroNameText.getText().trim();
-            String genderSwordsman = HerogenderText.getText().trim();
+            String genderSwordsman = HeroGenderText.getText().trim();
 
             ChooseHero.Hero = new Swordsman(nameSwordsman, genderSwordsman);
             HeroStatsArea.setText("\n" + Hero.printInfo());
@@ -178,7 +178,7 @@ public class ChooseHero extends javax.swing.JFrame{
         if("Wizard".equals(CharactersComboBox.getSelectedItem().toString())){
             HeroTextArea.setText("");
             String nameWizard = HeroNameText.getText().trim();
-            String genderWizard = HerogenderText.getText().trim();
+            String genderWizard = HeroGenderText.getText().trim();
 
             ChooseHero.Hero = new Wizard(nameWizard, genderWizard);
             HeroStatsArea.setText("\n" + Hero.printInfo());
@@ -187,7 +187,7 @@ public class ChooseHero extends javax.swing.JFrame{
         if("Archer".equals(CharactersComboBox.getSelectedItem().toString())){
             HeroTextArea.setText("");
             String nameArcher = HeroNameText.getText().trim();
-            String genderArcher = HerogenderText.getText().trim();
+            String genderArcher = HeroGenderText.getText().trim();
 
             ChooseHero.Hero = new Archer(nameArcher, genderArcher);
             HeroStatsArea.setText("\n" + Hero.printInfo());
@@ -196,9 +196,9 @@ public class ChooseHero extends javax.swing.JFrame{
 
     }//GEN-LAST:event_CharactersComboBoxActionPerformed
 
-    private void HerogenderTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HerogenderTextActionPerformed
+    private void HeroGenderTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroGenderTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_HerogenderTextActionPerformed
+    }//GEN-LAST:event_HeroGenderTextActionPerformed
 
     private void HeroNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroNameTextActionPerformed
         // TODO add your handling code here:
@@ -212,15 +212,15 @@ public class ChooseHero extends javax.swing.JFrame{
         }else if ("".equals(HeroNameText.getText())){
             String text = "Please enter a name!";
             HeroStatsArea.setText(text);      
-        }else if ("".equals(HerogenderText.getText())){
+        }else if ("".equals(HeroGenderText.getText())){
             String text = "Please enter a gender!";
             HeroStatsArea.setText(text);      
-        }else if ("".equals(HeroNameText.getText()) && "".equals(HerogenderText.getText())){
+        }else if ("".equals(HeroNameText.getText()) && "".equals(HeroGenderText.getText())){
             String text = "Please enter a name and gender!";
             HeroStatsArea.setText(text);      
         }else {
             Hero.setHeroName(HeroNameText.getText());
-            Hero.setGender(HerogenderText.getText());
+            Hero.setGender(HeroGenderText.getText());
             HeroTextArea.append("\nYour Hero details:");
             HeroTextArea.append("\nName: " + Hero.getHeroName());
             HeroTextArea.append("\ngender: " + Hero.getGender());
@@ -241,7 +241,7 @@ public class ChooseHero extends javax.swing.JFrame{
     private void RestartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestartButtonActionPerformed
         // TODO add your handling code here:
         frame.setVisible(false);
-         new IntroductionFrame().setVisible(true);
+         new FirstMainFrame().setVisible(true);
     }//GEN-LAST:event_RestartButtonActionPerformed
 
     /**
@@ -297,10 +297,10 @@ public class ChooseHero extends javax.swing.JFrame{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> CharactersComboBox;
-    private javax.swing.JButton ConfirmHeroButton;
+    private javax.swing.JButton ComfirmHeroButton;
     private javax.swing.JButton EndButton;
+    public javax.swing.JTextField HeroGenderText;
     public javax.swing.JTextField HeroNameText;
-    public javax.swing.JTextField HerogenderText;
     private javax.swing.JTextArea HeroStatsArea;
     private javax.swing.JTextArea HeroTextArea;
     private javax.swing.JButton RestartButton;

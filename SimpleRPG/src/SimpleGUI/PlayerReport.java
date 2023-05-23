@@ -19,7 +19,7 @@ public class PlayerReport {
     
     //creates a gui to display players scores
     public static void main(PlayerReport player) {
-        new GUI("Players Scores", player);
+        new MainWindow("Players Scores", player);
     }
     
     //Getters and Setters
