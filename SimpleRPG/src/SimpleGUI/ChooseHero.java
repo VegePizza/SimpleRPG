@@ -206,8 +206,8 @@ public class ChooseHero extends javax.swing.JFrame{
     //Display message pushing user to select option before continuing
     private void ConfirmHeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmHeroButtonActionPerformed
         // TODO add your handling code here:
-        if ("Select Occupation".equals(CharactersComboBox.getSelectedItem().toString())){
-            String text = "Please select a Hero!";
+        if ("Please Select".equals(CharactersComboBox.getSelectedItem().toString())){
+            String text = "Please select a Hero Occupation!";
             HeroStatsArea.setText(text);
         }else if ("".equals(HeroNameText.getText())){
             String text = "Please enter a name!";
