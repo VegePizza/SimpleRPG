@@ -167,7 +167,10 @@ public class ChooseHero extends javax.swing.JFrame{
     private void CharactersComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CharactersComboBoxActionPerformed
 
         if("Swordsman".equals(CharactersComboBox.getSelectedItem().toString())){
-            HeroTextArea.setText("");
+            HeroTextArea.setText("\n" +
+                    "                 :O  " + "\n" +
+                    "                 /|\\ =[====> " + "\n" +
+                    "             \"  / \\\\ \""); 
             String nameSwordsman = HeroNameText.getText().trim();
             String genderSwordsman = HeroGenderText.getText().trim();
 
@@ -176,7 +179,10 @@ public class ChooseHero extends javax.swing.JFrame{
             ChooseHero.HeroText = this.HeroTextArea.getText();
         }
         if("Wizard".equals(CharactersComboBox.getSelectedItem().toString())){
-            HeroTextArea.setText("");
+            HeroTextArea.setText("\n" +
+                    "               ;O  "+ "\n" +
+                    "               /|\\ --===*** "+ "\n" +
+                    "           \"  / \\\\ \"");
             String nameWizard = HeroNameText.getText().trim();
             String genderWizard = HeroGenderText.getText().trim();
 
@@ -185,7 +191,10 @@ public class ChooseHero extends javax.swing.JFrame{
             ChooseHero.HeroText = this.HeroTextArea.getText();
         }
         if("Archer".equals(CharactersComboBox.getSelectedItem().toString())){
-            HeroTextArea.setText("");
+            HeroTextArea.setText("\n" +
+                    "               ~O  \\"+ "\n" +
+                    "               /|\\--)---> "+ "\n" +
+                    "           \"  / \\\\ /\"");
             String nameArcher = HeroNameText.getText().trim();
             String genderArcher = HeroGenderText.getText().trim();
 
