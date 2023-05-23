@@ -52,10 +52,10 @@ public class TreasureHunt {
     }
 
     //Getters and Setters
-    public int getPerformHunger() {
+    public int getTreasureHunger() {
         return treasureHunger;
     }
-    public void setPerformHunger(int treasureHunger) {
+    public void setTreasureHunger(int treasureHunger) {
         this.treasureHunger = treasureHunger;
     }
     public Hero getHero() {
@@ -64,13 +64,13 @@ public class TreasureHunt {
     public void setHero(Hero Hero) {
         this.Hero = Hero;
     }
-    public int getPerformOption() {
+    public int getTreasureOption() {
         return treasureOption;
     }
-    public void setPerformOption(int treasureOption) {
+    public void setTreasureOption(int treasureOption) {
         this.treasureOption = treasureOption;
     }   
-    public String getPerform() {
+    public String getTreasure() {
         return treasure;
     }
     public void setFood(String treasure) {
