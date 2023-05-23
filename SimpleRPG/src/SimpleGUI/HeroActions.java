@@ -254,8 +254,8 @@ public class HeroActions extends JFrame{
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Treasure Hunt":
-            TreasureHunt perform = new TreasureHunt(Hero, 3);
-            HeroGameArea.setText(perform.performHero());
+            TreasureHunt treasure = new TreasureHunt(Hero, 3);
+            HeroGameArea.setText(treasure.treasureHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             default:
@@ -303,8 +303,8 @@ public class HeroActions extends JFrame{
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Perform":
-            TreasureHunt perform = new TreasureHunt(Hero, 2);
-            HeroGameArea.setText(perform.performHero());
+            TreasureHunt treasure = new TreasureHunt(Hero, 2);
+            HeroGameArea.setText(treasure.treasureHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             default:
@@ -352,8 +352,8 @@ public class HeroActions extends JFrame{
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Perform":
-            TreasureHunt perform = new TreasureHunt(Hero, 1);
-            HeroGameArea.setText(perform.performHero());
+            TreasureHunt treasure = new TreasureHunt(Hero, 1);
+            HeroGameArea.setText(treasure.treasureHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             default:
@@ -410,7 +410,7 @@ public class HeroActions extends JFrame{
                 + "3. Luxury Training");
         }
         if("Perform".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("What act would you and " + Hero.heroName + " like to perform"
+            HeroGameArea.setText("What act would you and " + Hero.heroName + " like to treasure"
                 + "\nOptions are:\n"
                 + "1. Basic Show\n"
                 + "2. Intermediate Show\n"
