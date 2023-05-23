@@ -8,9 +8,9 @@ public class Train {
     private int trainOption;
     private String train;
     private int trainHunger;
-    private int trainagility;
+    private int trainenergy;
     
-    //Train method to increase strength, health and hunger while decreasing agility
+    //Train method to increase strength, health and hunger while decreasing energy
     public Train(Hero Hero, int trainOption){
         this.Hero = Hero;
         this.trainOption = trainOption;
@@ -22,9 +22,9 @@ public class Train {
                 Hero.health += 1;
                 Hero.strength += 1;
                 Hero.hunger += 3;
-                Hero.agility -= 3;
+                Hero.energy -= 3;
                 this.trainHunger = 3;
-                this.trainagility = 3;
+                this.trainenergy = 3;
                 break;
             case 2:
                 //middle option
@@ -32,9 +32,9 @@ public class Train {
                 Hero.health += 2;
                 Hero.strength += 2;
                 Hero.hunger += 2;
-                Hero.agility -= 2;
+                Hero.energy -= 2;
                 this.trainHunger = 2;
-                this.trainagility = 2;
+                this.trainenergy = 2;
                 break;
             case 3:
                 //highest option
@@ -42,13 +42,13 @@ public class Train {
                 Hero.health += 3;
                 Hero.strength += 3;
                 Hero.hunger += 1;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 this.trainHunger = 1;
-                this.trainagility = 1;
+                this.trainenergy = 1;
                 break;
             default:
                 this.trainHunger = 0;
-                this.trainagility = 0;
+                this.trainenergy = 0;
                 this.trainOption = 0;
                 break;
         }
@@ -61,11 +61,11 @@ public class Train {
     public void setTrainHunger(int trainHunger) {
         this.trainHunger = trainHunger;
     }
-    public int getTrainagility() {
-        return trainagility;
+    public int getTrainenergy() {
+        return trainenergy;
     }
-    public void setTrainagility(int trainagility) {
-        this.trainagility = trainagility;
+    public void setTrainenergy(int trainenergy) {
+        this.trainenergy = trainenergy;
     }
     public Hero getHero() {
         return Hero;
@@ -92,7 +92,7 @@ public class Train {
                         + "\nHero Health is increased by " + trainOption + "\nHealth: " + Hero.health
                         + "\nHero Strength is increased by " + trainOption + "\nStrength: " + Hero.strength
                         + "\nHero Hunger is increased by " + this.trainHunger + "\nHunger: " + Hero.hunger
-                        + "\nHero agility is decreased by " + this.trainagility + "\nagility: " + Hero.agility);
+                        + "\nHero energy is decreased by " + this.trainenergy + "\nenergy: " + Hero.energy);
         return trainText;
     }
      

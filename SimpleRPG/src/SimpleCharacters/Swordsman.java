@@ -11,7 +11,7 @@ public class Swordsman extends Hero{
         super.hunger = 2;
         super.health = 10;
         super.strength = 8;
-        super.agility = 5;
+        super.energy = 5;
         super.intelligence = 3;
         super.heroName = name;
         super.gender = gender;

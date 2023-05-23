@@ -262,7 +262,7 @@ public class HeroActions extends JFrame{
         }
         Option1.setSelected(false);
         Option2.setSelected(false);
-        HeroGameArea.append(Hero.checkagility(Hero));
+        HeroGameArea.append(Hero.checkenergy(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
         HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
@@ -311,7 +311,7 @@ public class HeroActions extends JFrame{
         }
         Option1.setSelected(false);
         Option3.setSelected(false);
-        HeroGameArea.append(Hero.checkagility(Hero));
+        HeroGameArea.append(Hero.checkenergy(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
         HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
@@ -360,7 +360,7 @@ public class HeroActions extends JFrame{
         }
         Option2.setSelected(false);
         Option3.setSelected(false);
-        HeroGameArea.append(Hero.checkagility(Hero));
+        HeroGameArea.append(Hero.checkenergy(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
         HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());

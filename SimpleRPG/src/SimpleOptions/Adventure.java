@@ -8,9 +8,9 @@ public class Adventure {
     private int playOption;
     private String activity;
     private int playHunger;
-    private int playagility;
+    private int playenergy;
 
-    //play method to decrease agility but increase health and hunger
+    //play method to decrease energy but increase health and hunger
     public Adventure(Hero Hero, int playOption){
         this.Hero = Hero;
         this.playOption = playOption;
@@ -20,33 +20,33 @@ public class Adventure {
                 //lowest option
                 this.activity = "Basic Fun";
                 Hero.health += 3;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.hunger += 3;
                 this.playHunger = 3;
-                this.playagility = 2;
+                this.playenergy = 2;
                 break;
             case 2:
                 //middle option
                 this.activity = "Intermediate Fun";
                 Hero.health += 6;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.hunger += 2;
                 this.playHunger = 2;
-                this.playagility = 2;
+                this.playenergy = 2;
                 break;
             case 3:
                 //highest option
                 this.activity = "Luxury Fun";
                 Hero.health += 9;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.hunger += 1;
                 this.playHunger = 1;
-                this.playagility = 1;
+                this.playenergy = 1;
                 break;
             default:
                 this.playHunger = 0;
                 this.playOption = 0;
-                this.playagility = 0;
+                this.playenergy = 0;
                 break;
         }
     }
@@ -82,7 +82,7 @@ public class Adventure {
         String playText = ("Hero has been given " + activity
                        + "\nHero Health is increased by " + playOption*3 + "\nHealth: " + Hero.health
                        + "\nHero Hunger is increased by " + this.playHunger + "\nHunger: " + Hero.hunger
-                       + "\nHero agility is decreased by " + this.playagility + "\nagility: " + Hero.agility);
+                       + "\nHero energy is decreased by " + this.playenergy + "\nenergy: " + Hero.energy);
         return playText;
     }
      

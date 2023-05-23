@@ -11,7 +11,7 @@ public class Wizard extends Hero{
         super.hunger = 3;
         super.health = 5;
         super.strength = 7;
-        super.agility = 7;
+        super.energy = 7;
         super.intelligence = 4;
         super.heroName = name;
         super.gender = gender;

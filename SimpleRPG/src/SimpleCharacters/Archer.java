@@ -11,7 +11,7 @@ public class Archer extends Hero{
         super.hunger = 3;
         super.health = 3;
         super.strength = 7;
-        super.agility = 7;
+        super.energy = 7;
         super.intelligence = 1;
         super.heroName = name;
         super.gender = gender;

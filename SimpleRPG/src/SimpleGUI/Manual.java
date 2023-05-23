@@ -10,7 +10,7 @@ public class Manual{
                 + "\n"
                 + "*** About Occupation ***\n" 
                 + "Each occupation has its unique set of starting attributes,\n"
-                + "such as health, strength, agility, wisdom, and attack.\n" 
+                + "such as health, strength, energy, wisdom, and attack.\n" 
                 + "\n"
                 + "*** About adventure ***\n"
                 + "Each adventure has a different enemy type, and some locations\n"
