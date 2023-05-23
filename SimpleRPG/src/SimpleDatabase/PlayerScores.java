@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.DatabaseMetaData;
+import java.sql.PreparedStatement;
 
 public class PlayerScores {
     
@@ -33,6 +34,68 @@ public class PlayerScores {
             System.out.println(ex.getMessage());
         }
     }
+    
+    public void updatePlayerScore(String name, int newScore) {
+    String query = "UPDATE SCORES SET SCORE = ? WHERE PLAYER = ?";
+    try (PreparedStatement stmt = conn.prepareStatement(query)) {
+        stmt.setInt(1, newScore);
+        stmt.setString(2, name);
+        stmt.executeUpdate();
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+}
+
+    public void deletePlayerScore(String name) {
+    String query = "DELETE FROM SCORES WHERE PLAYER = ?";
+    try (PreparedStatement stmt = conn.prepareStatement(query)) {
+        stmt.setString(1, name);
+        stmt.executeUpdate();
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+}
+    
+    public int getPlayerScore(String name) {
+    String query = "SELECT SCORE FROM SCORES WHERE PLAYER = ?";
+    try (PreparedStatement stmt = conn.prepareStatement(query)) {
+        stmt.setString(1, name);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            return rs.getInt("SCORE");
+        }
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+    return -1; // return -1 if the player was not found
+}
+
+    public String getPlayerWithHighestScore() {
+    String query = "SELECT PLAYER FROM SCORES ORDER BY SCORE DESC LIMIT 1";
+    try (Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(query)) {
+        if (rs.next()) {
+            return rs.getString("PLAYER");
+        }
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+    return null; // return null if there are no players
+}
+
+    public int getNumberOfPlayers() {
+    String query = "SELECT COUNT(*) AS player_count FROM SCORES";
+    try (Statement stmt = conn.createStatement();
+         ResultSet rs = stmt.executeQuery(query)) {
+        if (rs.next()) {
+            return rs.getInt("player_count");
+        }
+    } catch (SQLException ex) {
+        System.out.println(ex.getMessage());
+    }
+    return 0; // return 0 if there are no players or an error occurred
+}
+
     
     //close connection 
     public void closeConnection() {

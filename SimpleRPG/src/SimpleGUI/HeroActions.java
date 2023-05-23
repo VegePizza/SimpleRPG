@@ -167,7 +167,7 @@ public class HeroActions extends JFrame{
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 20, 276, 17);
 
-        HeroActionsCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Heal", "Play", "Battle", "Train", "Perform" }));
+        HeroActionsCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Heal", "Battle", "Adventure", "Train", "Treasure Hunt" }));
         HeroActionsCombobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HeroActionsComboboxActionPerformed(evt);
@@ -242,7 +242,7 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(battle.battleHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Play":
+            case "Adventure":
             Adventure play = new Adventure(Hero, 3);
             HeroGameArea.setText(play.playHero());
             HeroStatsArea1.setText(Hero.printInfo());
@@ -252,7 +252,7 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(train.trainHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Perform":
+            case "Treasure Hunt":
             TreasureHunt perform = new TreasureHunt(Hero, 3);
             HeroGameArea.setText(perform.performHero());
             HeroStatsArea1.setText(Hero.printInfo());
