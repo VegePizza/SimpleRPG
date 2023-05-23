@@ -9,6 +9,7 @@ import static SimpleGUI.ChooseHero.Hero;
 import static SimpleGUI.ChooseHero.HeroText;
 import static SimpleGUI.FirstMainFrame.player;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 //third frame
 public class HeroActions extends JFrame{
@@ -439,7 +440,7 @@ public class HeroActions extends JFrame{
     //scores shown
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
         // TODO add your handling code here:
-        PlayerReport.main(player);
+        SwingUtilities.invokeLater(ReadWriteDB::new);
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     /**
