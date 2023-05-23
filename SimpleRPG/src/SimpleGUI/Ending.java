@@ -16,7 +16,7 @@ public class Ending {
                    + "\nWell done, you have completed the game!\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
-        MainWindow g = new MainWindow();
+        WindowFrame g = new WindowFrame();
         g.GUIend("Good Game", goodEnding);
     }
     
@@ -28,7 +28,7 @@ public class Ending {
                    + "\nToo bad " + Hero.heroName + " has decided to run away...\n"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
-        MainWindow g = new MainWindow();
+        WindowFrame g = new WindowFrame();
         g.GUIend("Bad Game", badEnding); 
     }
     

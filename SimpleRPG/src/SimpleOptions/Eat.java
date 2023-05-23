@@ -2,7 +2,7 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Eat extends Hero{
+public class Eat {
     private Hero Hero;
     private int foodOption;
     private String food;

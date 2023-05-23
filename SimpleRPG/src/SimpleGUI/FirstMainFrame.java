@@ -123,7 +123,7 @@ public class FirstMainFrame extends JFrame {
         // TODO add your handling code here:
         if("".equals(NameField.getText())){
             String text = "Please enter player name to continue!";
-            new MainWindow("Enter Name!", text);
+            new WindowFrame("Enter Name!", text);
        }else{
             player.setUsername(NameField.getText());
             FirstMainFrame.super.dispose();

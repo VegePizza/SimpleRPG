@@ -2,7 +2,7 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Challenge extends Hero{
+public class Challenge {
     private Hero Hero;
     private int cleaningOption;
     private String clean;

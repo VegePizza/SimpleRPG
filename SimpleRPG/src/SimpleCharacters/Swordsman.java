@@ -31,5 +31,9 @@ public class Swordsman extends Hero{
     public void setgender(String gender) {
         this.gender = gender;
     }
-
+    
+    @Override
+    public String getCharacterClass() {
+        return "Wizard";
+    }
 }

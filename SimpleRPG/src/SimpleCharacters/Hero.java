@@ -1,6 +1,6 @@
 package SimpleCharacters;
 
-public class Hero {
+public abstract class Hero {
    
     public String heroName;
     public String gender;
@@ -24,7 +24,10 @@ public class Hero {
         this.strength = 0;
         this.HeroScore = 0;          
     }
-
+    // if you create an instance of Swordsman, Wizard, or Archer, and call 
+    // the getCharacterClass() method, it will return the corresponding class type.
+    public abstract String getCharacterClass();
+    
     //getters and setters for above stats
     public String getGender() {
         return gender;
@@ -205,6 +208,5 @@ public class Hero {
                 + "\nHero Score: " + this.HeroScore);
         return HeroReport;
     }
-    
 }
 

@@ -2,7 +2,7 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Adventure extends Hero{
+public class Adventure {
     //initialise variables
     private Hero Hero;
     private int playOption;

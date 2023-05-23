@@ -15,9 +15,8 @@ public class PlayerScoresMain {
         scores.updatePlayerScore("John", 90);
         scores.deletePlayerScore("John");
 
-        // Get the highest score and print it
+        // Get the highest score
         int highestScore = scores.getHighestScore();
-        System.out.println("The highest score is: " + highestScore);
 
         // Reset all scores
         scores.resetAllScores();

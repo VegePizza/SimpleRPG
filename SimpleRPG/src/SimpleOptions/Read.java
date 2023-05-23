@@ -2,7 +2,7 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Read extends Hero{
+public class Read {
     private Hero Hero;
     private int performOption;
     private String perform;

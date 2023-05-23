@@ -27,7 +27,7 @@ public class Manual{
                 + "- Your hero's health drops to 0 or below, game over.\n" 
                 + "- Your hero reaches level 100, and you win the game.\n");
       
-        new MainWindow("Game Manual", text);
+        new WindowFrame("Game Manual", text);
         
     }
 
