@@ -1,7 +1,6 @@
 package SimpleDatabase;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -34,58 +33,7 @@ public class PlayerScores {
             System.out.println(ex.getMessage());
         }
     }
-     // Method to update player score
-    public void updatePlayerScore(String playerName, int newScore) {
-        try {
-            String updateQuery = "UPDATE SCORES SET SCORE = ? WHERE PLAYER = ?";
-            PreparedStatement pstmt = conn.prepareStatement(updateQuery);
-            pstmt.setInt(1, newScore);
-            pstmt.setString(2, playerName);
-            pstmt.executeUpdate();
-        } catch(SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
-
-    // Method to delete a player's score
-    public void deletePlayerScore(String playerName) {
-        try {
-            String deleteQuery = "DELETE FROM SCORES WHERE PLAYER = ?";
-            PreparedStatement pstmt = conn.prepareStatement(deleteQuery);
-            pstmt.setString(1, playerName);
-            pstmt.executeUpdate();
-        } catch(SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
     
-    // Method to fetch the highest score
-    public int getHighestScore() {
-        int highestScore = 0;
-        try {
-            String query = "SELECT MAX(SCORE) AS HIGHEST_SCORE FROM SCORES";
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            if (rs.next()) {
-                highestScore = rs.getInt("HIGHEST_SCORE");
-            }
-            rs.close();
-        } catch(SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return highestScore;
-    }
-
-    // Method to reset all scores
-    public void resetAllScores() {
-        try {
-            String query = "UPDATE SCORES SET SCORE = 0";
-            PreparedStatement pstmt = conn.prepareStatement(query);
-            pstmt.executeUpdate();
-        } catch(SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
     //close connection 
     public void closeConnection() {
         this.dbManager.closeConnection();
@@ -156,6 +104,5 @@ public class PlayerScores {
     return playersResultText;
 }
 }
-
 
 

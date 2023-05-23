@@ -18,7 +18,7 @@ public class Adventure {
         switch (playOption) {
             case 1:
                 //lowest option
-                this.activity = "Basic Fun";
+                this.activity = "Go to AUT WZ buliding";
                 Hero.health += 3;
                 Hero.energy -= 1;
                 Hero.hunger += 3;
@@ -27,7 +27,7 @@ public class Adventure {
                 break;
             case 2:
                 //middle option
-                this.activity = "Intermediate Fun";
+                this.activity = "Wondering on Queen Street";
                 Hero.health += 6;
                 Hero.energy -= 1;
                 Hero.hunger += 2;
@@ -36,7 +36,7 @@ public class Adventure {
                 break;
             case 3:
                 //highest option
-                this.activity = "Luxury Fun";
+                this.activity = "Dancing with your eyes closed";
                 Hero.health += 9;
                 Hero.energy -= 1;
                 Hero.hunger += 1;
