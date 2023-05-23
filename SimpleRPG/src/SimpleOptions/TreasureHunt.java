@@ -4,59 +4,59 @@ import SimpleCharacters.Hero;
 
 public class TreasureHunt {
     private Hero Hero;
-    private int performOption;
-    private String perform;
-    private int performHunger;
+    private int treasureOption;
+    private String treasure;
+    private int treasureHunger;
 
-    //perform method to increase money according to user input
-    public TreasureHunt(Hero Hero, int performOption){
+    //treasure method to increase money according to user input
+    public TreasureHunt(Hero Hero, int treasureOption){
         this.Hero = Hero;
-        this.performOption = performOption;
+        this.treasureOption = treasureOption;
         
         //user input decide which option seleceted
-        switch (this.performOption) {
+        switch (this.treasureOption) {
             //certain options locked behind strength stat
             case 1:
-                this.perform = "Basic Show";
+                this.treasure = "Gold Mine in Rotorua";
                 Hero.money += 10;
                 Hero.hunger += 3;
-                this.performHunger = 3;
+                this.treasureHunger = 3;
                 break;
             case 2:
                 if(Hero.getStrength() < 10){
-                    this.perform = ("N/A. " + Hero.heroName + " needs more training!");
-                    this.performOption = 0;
+                    this.treasure = ("Not enough Strength " + Hero.heroName + " needs more training!");
+                    this.treasureOption = 0;
                     break;
                 }
-                this.perform = "Intermediate Show";
+                this.treasure = "Mountain Peak in Queenstown";
                 Hero.money += 20;
                 Hero.hunger += 2;
-                this.performHunger = 2;
+                this.treasureHunger = 2;
                 break;
             case 3:
                 if(Hero.getStrength() < 20){
-                    this.perform = ("N/A. " + Hero.heroName + " needs more training!");
-                    this.performOption = 0;
+                    this.treasure = ("Not enough Strength " + Hero.heroName + " needs more training!");
+                    this.treasureOption = 0;
                     break;
                 }
-                this.perform = "Advanced Show";
+                this.treasure = "Auckland CBD";
                 Hero.money += 30;
                 Hero.hunger += 1;
-                this.performHunger = 1;
+                this.treasureHunger = 1;
                 break;
             default:
-                this.performOption = 0;
-                this.performHunger = 0;
+                this.treasureOption = 0;
+                this.treasureHunger = 0;
                 break;
         }
     }
 
     //Getters and Setters
-    public int getPerformHunger() {
-        return performHunger;
+    public int getTreasureHunger() {
+        return treasureHunger;
     }
-    public void setPerformHunger(int performHunger) {
-        this.performHunger = performHunger;
+    public void setTreasureHunger(int treasureHunger) {
+        this.treasureHunger = treasureHunger;
     }
     public Hero getHero() {
         return Hero;
@@ -64,25 +64,25 @@ public class TreasureHunt {
     public void setHero(Hero Hero) {
         this.Hero = Hero;
     }
-    public int getPerformOption() {
-        return performOption;
+    public int getTreasureOption() {
+        return treasureOption;
     }
-    public void setPerformOption(int performOption) {
-        this.performOption = performOption;
+    public void setTreasureOption(int treasureOption) {
+        this.treasureOption = treasureOption;
     }   
-    public String getPerform() {
-        return perform;
+    public String getTreasure() {
+        return treasure;
     }
-    public void setFood(String perform) {
-        this.perform = perform;
+    public void setFood(String treasure) {
+        this.treasure = treasure;
     }
    
-    //output stats effected by perform method
-    public String performHero(){
-        String performText = ("You and " + Hero.heroName + " Perform: " + perform
-                    + "\nMoney increased by: " + performOption*10 + "\nMoney: " + Hero.money
-                    + "\nHunger increased by: " + this.performHunger + "\nHunger: " + Hero.hunger);
-        return performText;
+    //output stats effected by treasure method
+    public String treasureHero(){
+        String treasureText = ("You and " + Hero.heroName + " Perform: " + treasure
+                    + "\nMoney increased by: " + treasureOption*10 + "\nMoney: " + Hero.money
+                    + "\nHunger increased by: " + this.treasureHunger + "\nHunger: " + Hero.hunger);
+        return treasureText;
     }
      
 }

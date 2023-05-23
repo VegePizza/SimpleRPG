@@ -17,7 +17,7 @@ public class Ending {
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
         WindowFrame g = new WindowFrame();
-        g.GUIend("Good Game", goodEnding);
+        g.GUIend("You win!!!", goodEnding);
     }
     
     //shows bad ending text
@@ -29,7 +29,7 @@ public class Ending {
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
         WindowFrame g = new WindowFrame();
-        g.GUIend("Bad Game", badEnding); 
+        g.GUIend("You lose...", badEnding); 
     }
     
 }

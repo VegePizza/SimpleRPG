@@ -17,7 +17,7 @@ public class ReadWriteDB {
         scores = new PlayerScores();
         
         JFrame frame = new JFrame("Score Manager");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(400, 200);
         
         JPanel panel = new JPanel();
