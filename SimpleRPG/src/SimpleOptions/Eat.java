@@ -2,11 +2,11 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Eat extends Hero{
+public class Eat {
     private Hero Hero;
     private int foodOption;
     private String food;
-    private int foodagility;
+    private int foodenergy;
     
     //feeds Hero based on user input to the options on what food....
     public Eat(Hero Hero, int foodOption){
@@ -25,9 +25,9 @@ public class Eat extends Hero{
                 this.food = "Basic Food: $2";
                 Hero.health += 1;
                 Hero.hunger -= 1;
-                Hero.agility -= 3;
+                Hero.energy -= 3;
                 Hero.money -= 2;
-                this.foodagility = 3;
+                this.foodenergy = 3;
                 break;
             case 2:
                 if(Hero.getMoney()< 4){
@@ -38,9 +38,9 @@ public class Eat extends Hero{
                 this.food = "Intermediate Food: $4";
                 Hero.health += 2;
                 Hero.hunger -= 2;
-                Hero.agility -= 2;
+                Hero.energy -= 2;
                 Hero.money -= 4;
-                this.foodagility = 2;
+                this.foodenergy = 2;
                 break;
             case 3:
                 if(Hero.getMoney()< 6){
@@ -51,13 +51,13 @@ public class Eat extends Hero{
                 this.food = "Luxury Food: $6";
                 Hero.health += 3;
                 Hero.hunger -= 3;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.money -= 6;
-                this.foodagility = 1;
+                this.foodenergy = 1;
                 break;
             default:
                 this.foodOption = 0;
-                this.foodagility = 0;
+                this.foodenergy = 0;
                 break;
         }
     }
@@ -81,11 +81,11 @@ public class Eat extends Hero{
     public void setFood(String food) {
         this.food = food;
     }  
-    public int getFoodagility() {
-        return foodagility;
+    public int getFoodenergy() {
+        return foodenergy;
     }
-    public void setFoodagility(int foodagility) {
-        this.foodagility = foodagility;
+    public void setFoodenergy(int foodenergy) {
+        this.foodenergy = foodenergy;
     }
     
     //output to user effects of feed method
@@ -93,7 +93,7 @@ public class Eat extends Hero{
         String feedText = ("Hero is fed " + getFood() 
                         + "\nHero Health is increased by " + getFoodOption() + "\nHealth: " + getHero().health
                         + "\nHero Hunger is decreased by " + getFoodOption() + "\nHunger: " + getHero().hunger
-                        + "\nHero agility is decreased by " + getFoodagility() + "\nagility: " + getHero().agility
+                        + "\nHero energy is decreased by " + getFoodenergy() + "\nenergy: " + getHero().energy
                         + "\nMoney is decreased by " + getFoodOption()*2 + "\nMoney: " + getHero().money);
         
         return feedText;

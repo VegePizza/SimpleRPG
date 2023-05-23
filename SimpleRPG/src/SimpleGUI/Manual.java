@@ -10,7 +10,7 @@ public class Manual{
                 + "\n"
                 + "*** About Occupation ***\n" 
                 + "Each occupation has its unique set of starting attributes,\n"
-                + "such as health, strength, agility, wisdom, and attack.\n" 
+                + "such as health, strength, energy, wisdom, and attack.\n" 
                 + "\n"
                 + "*** About adventure ***\n"
                 + "Each adventure has a different enemy type, and some locations\n"
@@ -27,7 +27,7 @@ public class Manual{
                 + "- Your hero's health drops to 0 or below, game over.\n" 
                 + "- Your hero reaches level 100, and you win the game.\n");
       
-        new GUI("Game Manual", text);
+        new WindowFrame("Game Manual", text);
         
     }
 

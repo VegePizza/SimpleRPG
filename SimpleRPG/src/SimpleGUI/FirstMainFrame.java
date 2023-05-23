@@ -3,7 +3,7 @@ package SimpleGUI;
 import javax.swing.JFrame;
 
 //starting frame
-public class IntroductionFrame extends JFrame {
+public class FirstMainFrame extends JFrame {
     
    private static JFrame frame = new JFrame();
    public static PlayerReport player;
@@ -11,7 +11,7 @@ public class IntroductionFrame extends JFrame {
     /**
      * Creates new form IntroductionFrame
      */
-    public IntroductionFrame() {
+    public FirstMainFrame() {
         player = new PlayerReport();
         initComponents();
     }
@@ -45,9 +45,9 @@ public class IntroductionFrame extends JFrame {
             }
         });
         getContentPane().add(NameField);
-        NameField.setBounds(310, 240, 140, 30);
+        NameField.setBounds(200, 250, 140, 30);
 
-        ContinueButton.setBackground(new java.awt.Color(255, 255, 0));
+        ContinueButton.setBackground(new java.awt.Color(175, 219, 139));
         ContinueButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         ContinueButton.setText("Continue");
         ContinueButton.addActionListener(new java.awt.event.ActionListener() {
@@ -56,47 +56,52 @@ public class IntroductionFrame extends JFrame {
             }
         });
         getContentPane().add(ContinueButton);
-        ContinueButton.setBounds(220, 310, 120, 40);
+        ContinueButton.setBounds(210, 300, 120, 40);
 
-        HowToPlayButton.setBackground(new java.awt.Color(255, 255, 0));
+        HowToPlayButton.setBackground(new java.awt.Color(175, 219, 139));
         HowToPlayButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         HowToPlayButton.setText("How to Play");
+        HowToPlayButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         HowToPlayButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HowToPlayButtonActionPerformed(evt);
             }
         });
         getContentPane().add(HowToPlayButton);
-        HowToPlayButton.setBounds(200, 140, 130, 50);
+        HowToPlayButton.setBounds(200, 110, 130, 50);
 
-        EndButton.setBackground(new java.awt.Color(255, 255, 0));
+        EndButton.setBackground(new java.awt.Color(175, 219, 139));
         EndButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        EndButton.setText("End");
+        EndButton.setText("Quit");
         EndButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EndButtonActionPerformed(evt);
             }
         });
         getContentPane().add(EndButton);
-        EndButton.setBounds(40, 20, 72, 23);
+        EndButton.setBounds(20, 20, 72, 23);
 
-        TitleLabel1.setBackground(new java.awt.Color(255, 255, 0));
+        TitleLabel1.setBackground(new java.awt.Color(51, 255, 0));
         TitleLabel1.setFont(new java.awt.Font("Maiandra GD", 1, 20)); // NOI18N
+        TitleLabel1.setForeground(new java.awt.Color(76, 241, 10));
+        TitleLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TitleLabel1.setText("Welcome to SimpleRPG");
+        TitleLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        TitleLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(TitleLabel1);
-        TitleLabel1.setBounds(140, 70, 260, 40);
+        TitleLabel1.setBounds(110, 50, 310, 50);
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 0));
+        jLabel4.setBackground(new java.awt.Color(175, 219, 139));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("  Please enter your name:");
+        jLabel4.setText("Enter your name to Start:");
         jLabel4.setOpaque(true);
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(110, 240, 180, 30);
+        jLabel4.setBounds(180, 210, 180, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/IntroBG.jpg")));
         jLabel1.setMaximumSize(new java.awt.Dimension(750, 600));
         jLabel1.setMinimumSize(new java.awt.Dimension(750, 600));
-        jLabel1.setName("Virtual Hero Game Introduction"); // NOI18N
+        jLabel1.setName("Virtual Pet Game Introduction"); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(750, 600));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-20, -70, 590, 560);
@@ -118,10 +123,10 @@ public class IntroductionFrame extends JFrame {
         // TODO add your handling code here:
         if("".equals(NameField.getText())){
             String text = "Please enter player name to continue!";
-            new GUI("Enter Name!", text);
+            new WindowFrame("Enter Name!", text);
        }else{
             player.setUsername(NameField.getText());
-            IntroductionFrame.super.dispose();
+            FirstMainFrame.super.dispose();
             new ChooseHero().setVisible(true);
         }
     }//GEN-LAST:event_ContinueButtonActionPerformed
@@ -156,14 +161,18 @@ public class IntroductionFrame extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(IntroductionFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(IntroductionFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(IntroductionFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(IntroductionFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -171,7 +180,7 @@ public class IntroductionFrame extends JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            frame = new IntroductionFrame();
+            frame = new FirstMainFrame();
             frame.setVisible(true);
         });
     }

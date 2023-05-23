@@ -2,14 +2,14 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Read extends Hero{
+public class TreasureHunt {
     private Hero Hero;
     private int performOption;
     private String perform;
     private int performHunger;
 
     //perform method to increase money according to user input
-    public Read(Hero Hero, int performOption){
+    public TreasureHunt(Hero Hero, int performOption){
         this.Hero = Hero;
         this.performOption = performOption;
         

@@ -8,7 +8,7 @@ public class DBManager {
     
     private static final String USER_NAME = "pdc";
     private static final String PASSWORD = "pdc";
-    private static final String URL = "jdbc:derby:VirtualHeroGame_Ebd; create=true"; 
+    private static final String URL = "jdbc:derby:SimpleRPG_Ebd; create=true"; 
     
     Connection conn;
     

@@ -2,13 +2,14 @@ package SimpleGUI;
 
 import SimpleOptions.Train;
 import SimpleOptions.Adventure;
-import SimpleOptions.Read;
+import SimpleOptions.TreasureHunt;
 import SimpleOptions.Eat;
-import SimpleOptions.Challenge;
+import SimpleOptions.Battle;
 import static SimpleGUI.ChooseHero.Hero;
 import static SimpleGUI.ChooseHero.HeroText;
-import static SimpleGUI.IntroductionFrame.player;
+import static SimpleGUI.FirstMainFrame.player;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 //third frame
 public class HeroActions extends JFrame{
@@ -167,7 +168,7 @@ public class HeroActions extends JFrame{
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 20, 276, 17);
 
-        HeroActionsCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Heal", "Play", "Clean", "Train", "Perform" }));
+        HeroActionsCombobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Heal", "Battle", "Adventure", "Train", "Treasure Hunt" }));
         HeroActionsCombobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HeroActionsComboboxActionPerformed(evt);
@@ -237,12 +238,12 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(feed.feedHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Clean":
-            Challenge clean = new Challenge(Hero, 3);
-            HeroGameArea.setText(clean.cleanHero());
+            case "Battle":
+            Battle battle = new Battle(Hero, 3);
+            HeroGameArea.setText(battle.battleHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Play":
+            case "Adventure":
             Adventure play = new Adventure(Hero, 3);
             HeroGameArea.setText(play.playHero());
             HeroStatsArea1.setText(Hero.printInfo());
@@ -252,8 +253,8 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(train.trainHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Perform":
-            Read perform = new Read(Hero, 3);
+            case "Treasure Hunt":
+            TreasureHunt perform = new TreasureHunt(Hero, 3);
             HeroGameArea.setText(perform.performHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
@@ -262,7 +263,7 @@ public class HeroActions extends JFrame{
         }
         Option1.setSelected(false);
         Option2.setSelected(false);
-        HeroGameArea.append(Hero.checkagility(Hero));
+        HeroGameArea.append(Hero.checkenergy(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
         HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
@@ -286,9 +287,9 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(feed.feedHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Clean":
-            Challenge clean = new Challenge(Hero, 2);
-            HeroGameArea.setText(clean.cleanHero());
+            case "Battle":
+            Battle battle = new Battle(Hero, 2);
+            HeroGameArea.setText(battle.battleHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Play":
@@ -302,7 +303,7 @@ public class HeroActions extends JFrame{
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Perform":
-            Read perform = new Read(Hero, 2);
+            TreasureHunt perform = new TreasureHunt(Hero, 2);
             HeroGameArea.setText(perform.performHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
@@ -311,7 +312,7 @@ public class HeroActions extends JFrame{
         }
         Option1.setSelected(false);
         Option3.setSelected(false);
-        HeroGameArea.append(Hero.checkagility(Hero));
+        HeroGameArea.append(Hero.checkenergy(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
         HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
@@ -335,9 +336,9 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(feed.feedHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Clean":
-            Challenge clean = new Challenge(Hero, 1);
-            HeroGameArea.setText(clean.cleanHero());
+            case "Battle":
+            Battle battle = new Battle(Hero, 1);
+            HeroGameArea.setText(battle.battleHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Play":
@@ -351,7 +352,7 @@ public class HeroActions extends JFrame{
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Perform":
-            Read perform = new Read(Hero, 1);
+            TreasureHunt perform = new TreasureHunt(Hero, 1);
             HeroGameArea.setText(perform.performHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
@@ -360,7 +361,7 @@ public class HeroActions extends JFrame{
         }
         Option2.setSelected(false);
         Option3.setSelected(false);
-        HeroGameArea.append(Hero.checkagility(Hero));
+        HeroGameArea.append(Hero.checkenergy(Hero));
         HeroGameArea.append(Hero.checkHunger(Hero));
         HeroGameArea.append(Hero.checkHealth(Hero));
         HeroStatsArea1.setText(Hero.printInfo());
@@ -387,12 +388,12 @@ public class HeroActions extends JFrame{
                 + "2. Intermediate Food: $4\n"
                 + "3. Luxury Food: $6");
         }
-        if("Clean".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("How would you like to Clean " + Hero.heroName
+        if("Battle".equals(HeroActionsCombobox.getSelectedItem().toString())){
+            HeroGameArea.setText("How would you like to Battle " + Hero.heroName
                 + "\nOptions are:\n"
-                + "1. Basic Cleaning\n"
-                + "2. Intermediate Cleaning\n"
-                + "3. Luxury Cleaning");
+                + "1. Basic Battle\n"
+                + "2. Intermediate Battle\n"
+                + "3. Luxury Battle");
         }
         if("Play".equals(HeroActionsCombobox.getSelectedItem().toString())){
             HeroGameArea.setText("How would you like to Play with " + Hero.heroName
@@ -421,7 +422,7 @@ public class HeroActions extends JFrame{
     private void RestartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestartButtonActionPerformed
         // TODO add your handling code here:
         HeroActions.super.dispose();
-        new IntroductionFrame().setVisible(true);
+        new FirstMainFrame().setVisible(true);
     }//GEN-LAST:event_RestartButtonActionPerformed
 
     //ends program
@@ -439,7 +440,7 @@ public class HeroActions extends JFrame{
     //scores shown
     private void ScoresButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScoresButtonActionPerformed
         // TODO add your handling code here:
-        PlayerReport.main(player);
+        SwingUtilities.invokeLater(ReadWriteDB::new);
     }//GEN-LAST:event_ScoresButtonActionPerformed
 
     /**

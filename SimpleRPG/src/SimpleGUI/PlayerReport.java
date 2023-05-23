@@ -19,7 +19,7 @@ public class PlayerReport {
     
     //creates a gui to display players scores
     public static void main(PlayerReport player) {
-        new GUI("Players Scores", player);
+        new WindowFrame("Players Scores", player);
     }
     
     //Getters and Setters
@@ -41,6 +41,4 @@ public class PlayerReport {
     public void setHighestScore(int highestScore) {
         this.highestScore = highestScore;
     }
-
-    
 }

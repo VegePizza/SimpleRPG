@@ -24,7 +24,7 @@ public class Panel extends JPanel{
    
     //creates a panel and sets the background image
     Panel(String text){
-        this.image = new ImageIcon("./images/HowToPlayBG.jpg").getImage();
+        this.image = new ImageIcon("/images/HowToPlayBG.jpg").getImage();
         JTextArea gameText = new JTextArea();
         gameText.setText(text);
         gameText.setEditable(false);
@@ -37,7 +37,7 @@ public class Panel extends JPanel{
     
     //creates a panel and sets the background image for Hero report gui
     Panel(PlayerReport user){
-        this.image = new ImageIcon("./images/HowToPlayBG.jpg").getImage();
+        this.image = new ImageIcon("/images/HowToPlayBG.jpg").getImage();
         JTextArea gamePlayers = new JTextArea();
         gamePlayers.append("Player: " + user.getUsername() + "     Score: " + user.getScore());
         gamePlayers.setEditable(false);

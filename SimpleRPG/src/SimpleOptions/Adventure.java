@@ -2,15 +2,15 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Adventure extends Hero{
+public class Adventure {
     //initialise variables
     private Hero Hero;
     private int playOption;
     private String activity;
     private int playHunger;
-    private int playagility;
+    private int playenergy;
 
-    //play method to decrease agility but increase health and hunger
+    //play method to decrease energy but increase health and hunger
     public Adventure(Hero Hero, int playOption){
         this.Hero = Hero;
         this.playOption = playOption;
@@ -18,35 +18,35 @@ public class Adventure extends Hero{
         switch (playOption) {
             case 1:
                 //lowest option
-                this.activity = "Basic Fun";
+                this.activity = "Go to AUT WZ buliding";
                 Hero.health += 3;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.hunger += 3;
                 this.playHunger = 3;
-                this.playagility = 2;
+                this.playenergy = 2;
                 break;
             case 2:
                 //middle option
-                this.activity = "Intermediate Fun";
+                this.activity = "Wondering on Queen Street";
                 Hero.health += 6;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.hunger += 2;
                 this.playHunger = 2;
-                this.playagility = 2;
+                this.playenergy = 2;
                 break;
             case 3:
                 //highest option
-                this.activity = "Luxury Fun";
+                this.activity = "Dancing with your eyes closed";
                 Hero.health += 9;
-                Hero.agility -= 1;
+                Hero.energy -= 1;
                 Hero.hunger += 1;
                 this.playHunger = 1;
-                this.playagility = 1;
+                this.playenergy = 1;
                 break;
             default:
                 this.playHunger = 0;
                 this.playOption = 0;
-                this.playagility = 0;
+                this.playenergy = 0;
                 break;
         }
     }
@@ -82,7 +82,7 @@ public class Adventure extends Hero{
         String playText = ("Hero has been given " + activity
                        + "\nHero Health is increased by " + playOption*3 + "\nHealth: " + Hero.health
                        + "\nHero Hunger is increased by " + this.playHunger + "\nHunger: " + Hero.hunger
-                       + "\nHero agility is decreased by " + this.playagility + "\nagility: " + Hero.agility);
+                       + "\nHero energy is decreased by " + this.playenergy + "\nenergy: " + Hero.energy);
         return playText;
     }
      

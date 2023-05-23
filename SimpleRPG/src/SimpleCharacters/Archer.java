@@ -1,20 +1,20 @@
 package SimpleCharacters;
 
 public class Archer extends Hero{
-    private String nationality;
+    private String gender;
     private String name;
 
     //initialise Archer specific stats from default values
-    public Archer(String name, String nationality) {
+    public Archer(String name, String gender) {
         this.name = name;
-        this.nationality = nationality;
+        this.gender = gender;
         super.hunger = 3;
         super.health = 3;
         super.strength = 7;
-        super.agility = 7;
+        super.energy = 7;
         super.intelligence = 1;
         super.heroName = name;
-        super.nationality = nationality;
+        super.gender = gender;
         super.money = 30;
     }
     
@@ -25,11 +25,16 @@ public class Archer extends Hero{
     public void setName(String name) {
         this.name = name;
     } 
-    public String getNationality() {
-        return ("Nationality: " + nationality);
+    public String getgender() {
+        return ("gender: " + gender);
     }
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
+    public void setgender(String gender) {
+        this.gender = gender;
     }
+    
+    @Override
+    public String getCharacterClass() {
+        return "Archer";
+    }
+    
 }
-

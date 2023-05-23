@@ -1,7 +1,7 @@
 package SimpleDatabase;
 
 import static SimpleGUI.ChooseHero.Hero;
-import static SimpleGUI.IntroductionFrame.player;
+import static SimpleGUI.FirstMainFrame.player;
 
 public class PlayerScoresMain {
     
