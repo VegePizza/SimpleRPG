@@ -2,14 +2,14 @@ package SimpleOptions;
 
 import SimpleCharacters.Hero;
 
-public class Eat {
+public class Heal {
     private Hero Hero;
     private int foodOption;
     private String food;
     private int foodenergy;
     
-    //feeds Hero based on user input to the options on what food....
-    public Eat(Hero Hero, int foodOption){
+    //heals Hero based on user input to the options on what food....
+    public Heal(Hero Hero, int foodOption){
         this.Hero = Hero;
         this.foodOption = foodOption;
         
@@ -22,7 +22,7 @@ public class Eat {
                     this.foodOption = 0;
                     break;
                 }
-                this.food = "Basic Food: $2";
+                this.food = "Tiny Red Potion: $2";
                 Hero.health += 1;
                 Hero.hunger -= 1;
                 Hero.energy -= 3;
@@ -35,7 +35,7 @@ public class Eat {
                     this.foodOption = 0;
                     break;
                 }
-                this.food = "Intermediate Food: $4";
+                this.food = "Whole Bottle of Red Potion: $4";
                 Hero.health += 2;
                 Hero.hunger -= 2;
                 Hero.energy -= 2;
@@ -48,7 +48,7 @@ public class Eat {
                     this.foodOption = 0;
                     break;
                 }
-                this.food = "Luxury Food: $6";
+                this.food = "Finest NZ Red Wine: $6";
                 Hero.health += 3;
                 Hero.hunger -= 3;
                 Hero.energy -= 1;
@@ -88,15 +88,15 @@ public class Eat {
         this.foodenergy = foodenergy;
     }
     
-    //output to user effects of feed method
-    public String feedHero(){
-        String feedText = ("Hero is fed " + getFood() 
+    //output to user effects of heal method
+    public String healHero(){
+        String healText = ("Hero is fed " + getFood() 
                         + "\nHero Health is increased by " + getFoodOption() + "\nHealth: " + getHero().health
                         + "\nHero Hunger is decreased by " + getFoodOption() + "\nHunger: " + getHero().hunger
                         + "\nHero energy is decreased by " + getFoodenergy() + "\nenergy: " + getHero().energy
                         + "\nMoney is decreased by " + getFoodOption()*2 + "\nMoney: " + getHero().money);
         
-        return feedText;
+        return healText;
     }
      
 }

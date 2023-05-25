@@ -21,7 +21,7 @@ public class Battle {
                     this.battleOption = 0;
                     break;
                 }
-                this.battle = "Basic battle: $2";
+                this.battle = "AUT professors: $2";
                 Hero.health += 3;
                 Hero.energy += 1;
                 Hero.money -= 2;
@@ -33,7 +33,7 @@ public class Battle {
                     this.battleOption = 0;
                     break;
                 }
-                this.battle = "Intermediate Battle: $4";
+                this.battle = "Library Revolving Door: $4";
                 Hero.health += 2;
                 Hero.energy += 2;
                 Hero.money -= 4;
@@ -45,7 +45,7 @@ public class Battle {
                     this.battleOption = 0;
                     break;
                 }
-                this.battle = "Luxury Battle: $6";
+                this.battle = "Kiwi Bird On Waiheke Inland: $6";
                 Hero.health -= 1;
                 Hero.energy += 3;
                 Hero.money -= 6;

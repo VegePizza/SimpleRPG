@@ -24,8 +24,7 @@ public class Ending {
     public static void badGame() {
         PlayerScoresMain.main();
         String badEnding = ("\nPlayer: " + player.getUsername() + "  Score: " + Hero.getHeroScore() 
-                   + "\n\nSorry! " + Hero.heroName + " is not happy at all!"
-                   + "\nToo bad " + Hero.heroName + " has decided to run away...\n"
+                   + "\n\nSorry! " + Hero.heroName + " has fallen! Game Over!"
                    + "Here is your Hero Report\n" + Hero.printReportCard()
                    + "\n\nHighest Score: " + highestScore + "\n\nList of last 10 Players and Scores:\n" + Arrays.toString(scoresText));
         WindowFrame g = new WindowFrame();

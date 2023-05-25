@@ -3,7 +3,7 @@ package SimpleGUI;
 import SimpleOptions.Train;
 import SimpleOptions.Adventure;
 import SimpleOptions.TreasureHunt;
-import SimpleOptions.Eat;
+import SimpleOptions.Heal;
 import SimpleOptions.Battle;
 import static SimpleGUI.ChooseHero.Hero;
 import static SimpleGUI.ChooseHero.HeroText;
@@ -24,11 +24,11 @@ public class HeroActions extends JFrame{
         this.HeroTextArea.setText(HeroText);
         HeroStatsArea1.setText(Hero.printInfo());
         player.setScore(Hero.HeroScore);
-        HeroGameArea.setText("What would you like to feed " + Hero.heroName
+        HeroGameArea.setText("What would you like to heal " + Hero.heroName
                 + "\nOptions are:\n"
-                + "1. Basic Food: $2\n"
-                + "2. Intermediate Food: $4\n"
-                + "3. Luxury Food: $6");
+                + "1. Tiny Red Potion: $2\n"
+                + "2. Whole Bottle of Red Potion: $4\n"
+                + "3. A Drop of Finest NZ Red Wine: $6");
     }
 
     /**
@@ -234,8 +234,8 @@ public class HeroActions extends JFrame{
         if(null != HeroActionsCombobox.getSelectedItem().toString())
         switch (HeroActionsCombobox.getSelectedItem().toString()) {
             case "Heal":
-            Eat feed = new Eat(Hero, 3);
-            HeroGameArea.setText(feed.feedHero());
+            Heal heal = new Heal(Hero, 3);
+            HeroGameArea.setText(heal.healHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Battle":
@@ -283,8 +283,8 @@ public class HeroActions extends JFrame{
         if(null != HeroActionsCombobox.getSelectedItem().toString())
         switch (HeroActionsCombobox.getSelectedItem().toString()) {
             case "Heal":
-            Eat feed = new Eat(Hero, 2);
-            HeroGameArea.setText(feed.feedHero());
+            Heal heal = new Heal(Hero, 2);
+            HeroGameArea.setText(heal.healHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Battle":
@@ -292,7 +292,7 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(battle.battleHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Play":
+            case "Adventure":
             Adventure play = new Adventure(Hero, 2);
             HeroGameArea.setText(play.playHero());
             HeroStatsArea1.setText(Hero.printInfo());
@@ -302,7 +302,7 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(train.trainHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Perform":
+            case "Treasure Hunt":
             TreasureHunt treasure = new TreasureHunt(Hero, 2);
             HeroGameArea.setText(treasure.treasureHero());
             HeroStatsArea1.setText(Hero.printInfo());
@@ -332,8 +332,8 @@ public class HeroActions extends JFrame{
         if(null != HeroActionsCombobox.getSelectedItem().toString())
         switch (HeroActionsCombobox.getSelectedItem().toString()) {
             case "Heal":
-            Eat feed = new Eat(Hero, 1);
-            HeroGameArea.setText(feed.feedHero());
+            Heal heal = new Heal(Hero, 1);
+            HeroGameArea.setText(heal.healHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
             case "Battle":
@@ -341,7 +341,7 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(battle.battleHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Play":
+            case "Adventure":
             Adventure play = new Adventure(Hero, 1);
             HeroGameArea.setText(play.playHero());
             HeroStatsArea1.setText(Hero.printInfo());
@@ -351,7 +351,7 @@ public class HeroActions extends JFrame{
             HeroGameArea.setText(train.trainHero());
             HeroStatsArea1.setText(Hero.printInfo());
             break;
-            case "Perform":
+            case "Treasure Hunt":
             TreasureHunt treasure = new TreasureHunt(Hero, 1);
             HeroGameArea.setText(treasure.treasureHero());
             HeroStatsArea1.setText(Hero.printInfo());
@@ -382,39 +382,39 @@ public class HeroActions extends JFrame{
         Option2.setSelected(false);
         Option3.setSelected(false);
         if("Heal".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("What would you like to feed " + Hero.heroName
+            HeroGameArea.setText("What would you like to heal " + Hero.heroName
                 + "\nOptions are:\n"
-                + "1. Basic Food: $2\n"
-                + "2. Intermediate Food: $4\n"
-                + "3. Luxury Food: $6");
+                + "1. Tiny Red Potion: $2\n"
+                + "2. Whole Bottle of Red Potion: $4\n"
+                + "3. Finest NZ Red Wine: $6");
         }
         if("Battle".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("How would you like to Battle " + Hero.heroName
+            HeroGameArea.setText("Which enemy would you like to Battle " + Hero.heroName
                 + "\nOptions are:\n"
-                + "1. Basic Battle\n"
-                + "2. Intermediate Battle\n"
-                + "3. Luxury Battle");
+                + "1. AUT professors\n"
+                + "2. Library Revolving Door\n"
+                + "3. Kiwi Bird On Waiheke Inland");
         }
-        if("Play".equals(HeroActionsCombobox.getSelectedItem().toString())){
-            HeroGameArea.setText("How would you like to Play with " + Hero.heroName
+        if("Adventure".equals(HeroActionsCombobox.getSelectedItem().toString())){
+            HeroGameArea.setText("How would you like to Adventure with " + Hero.heroName
                 + "\nOptions are:\n"
-                + "1. Basic Fun\n"
-                + "2. Intermediate Fun\n"
-                + "3. Luxury Fun");
+                + "1. Ski trip to QueensTown\n"
+                + "2. Cafe at Mission Bay\n"
+                + "3. Netflix and Chill at home");
         }
         if("Train".equals(HeroActionsCombobox.getSelectedItem().toString())){
             HeroGameArea.setText("How would you like to Train " + Hero.heroName
                 + "\nOptions are:\n"
-                + "1. Basic Training\n"
-                + "2. Intermediate Training\n"
-                + "3. Luxury Training");
+                + "1. Go to a Gym nearby\n"
+                + "2. Run a Full Marathon\n"
+                + "3. Outrun Neigbor's Bull Dog");
         }
-        if("Perform".equals(HeroActionsCombobox.getSelectedItem().toString())){
+        if("Treasure Hunt".equals(HeroActionsCombobox.getSelectedItem().toString())){
             HeroGameArea.setText("What act would you and " + Hero.heroName + " like to treasure"
                 + "\nOptions are:\n"
-                + "1. Basic Show\n"
-                + "2. Intermediate Show\n"
-                + "3. Advanced Show");
+                + "1. The Invisible Kiwi Sanctuary in Wellington\n"
+                + "2. The Underwater Hobbit Village in Lake Wakatipu, Queenstown\n"
+                + "3. The Bouncing Hill of Sheep in Canterbury");
         }
     }//GEN-LAST:event_HeroActionsComboboxActionPerformed
 
