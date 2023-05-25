@@ -7,6 +7,7 @@ Student ID: 22184358
 1. This is an individual project, so NO contribution report.
 
 2. There are 9 interactions with the database in total.
+
 ("ReadWriteDB.java" and "PlayerScores.java"). 
 While playing, you can click button "Scores" checking its implementation.
 
@@ -15,6 +16,7 @@ While playing, you can click button "Scores" checking its implementation.
 4. There are 7 test cases in "TreasureHuntTest.java" using Junit4.
 
 5. The Git is hidden under main folder OR you can check the public repository on GitHub: 
+
 https://github.com/VegePizza/SimpleRPG.git
 
 6. When first run on your machine, run the GUI of "FirstMainFrame.java" using Netbeans IDE.
