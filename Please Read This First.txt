@@ -17,7 +17,6 @@ While playing, you can click button "Scores" checking its implementation.
 5. The Git is hidden under main folder OR you can check the public repository on GitHub: 
 https://github.com/VegePizza/SimpleRPG.git
 
-6. When first run on your machine, run the GUI of "FirstMainFrame.java" if using IDE.
-Or you may just run the .jar file in the main folder.
+6. When first run on your machine, run the GUI of "FirstMainFrame.java" using Netbeans IDE.
 
 7. Enjoy the game!

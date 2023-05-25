@@ -12,7 +12,7 @@ public class Manual{
                 + "\n"
                 + "Multiple actions are available each effecting different aspects of your Hero such as,\n"
                 + "Health, hunger, strength, energy and money.\n"
-                + "Every action has some positive effect on your Hero but watch out as there are negatives aswell,\n"
+                + "Every action has some positive effect on your Hero but watch out as there are negatives as well,\n"
                 + "Train - Strength\n"
                 + "Battle - Energy\n"
                 + "Treasure Hunt - Money\n"
@@ -21,11 +21,9 @@ public class Manual{
                 + "\n"
                 + "You want to keep your hunger level down while raising other stats up\n"
                 + "\n"
-                + "BTW: Inability to go for Treasure Hunt without proper training\n");
+                + "Hint for earning Money: Inability to go for Treasure Hunt without proper training\n");
       
         new WindowFrame("Game Manual", text);
-        
+       
     }
-
-    
 }
