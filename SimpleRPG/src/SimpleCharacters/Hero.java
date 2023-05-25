@@ -1,6 +1,6 @@
 package SimpleCharacters;
 
-public abstract class Hero {
+public abstract class Hero implements InterfaceCharacter{
    
     public String heroName;
     public String gender;
@@ -27,6 +27,12 @@ public abstract class Hero {
     // if you create an instance of Swordsman, Wizard, or Archer, and call 
     // the getCharacterClass() method, it will return the corresponding class type.
     public abstract String getCharacterClass();
+    
+    @Override
+    public void attack() {
+        int baseDamage = this.strength;
+        System.out.println(this.heroName + " attacks for " + baseDamage + " damage!");
+    }
     
     //getters and setters for above stats
     public String getGender() {
