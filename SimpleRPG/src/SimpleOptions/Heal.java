@@ -90,7 +90,7 @@ public class Heal {
     
     //output to user effects of heal method
     public String healHero(){
-        String healText = ("Hero is fed " + getFood() 
+        String healText = ("Hero is healed " + getFood() 
                         + "\nHero Health is increased by " + getFoodOption() + "\nHealth: " + getHero().health
                         + "\nHero Hunger is decreased by " + getFoodOption() + "\nHunger: " + getHero().hunger
                         + "\nHero energy is decreased by " + getFoodenergy() + "\nenergy: " + getHero().energy

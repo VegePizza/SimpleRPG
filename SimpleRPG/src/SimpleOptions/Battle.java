@@ -86,7 +86,7 @@ public class Battle {
     
     //output to user the effects of battle
     public String battleHero(){
-        String battleText = ("Hero has been given a " + battle
+        String battleText = ("Hero was battle with " + battle
                         + "\nHero health is decreased by "+ this.battleHealth + "\nHealth: " + Hero.health
                         + "\nHero energy is increased by " + battleOption + "\nenergy: " + Hero.energy
                         + "\nMoney is decreased by " + battleOption*2 + "\nMoney: " + Hero.getMoney());

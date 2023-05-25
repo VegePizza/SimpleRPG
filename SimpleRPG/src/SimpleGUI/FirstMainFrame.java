@@ -5,9 +5,9 @@ import javax.swing.JFrame;
 //starting frame
 public class FirstMainFrame extends JFrame {
     
-   private static JFrame frame = new JFrame();
-   public static PlayerReport player;
-
+    private static JFrame frame = new JFrame();
+    public static PlayerReport player;
+    
     /**
      * Creates new form IntroductionFrame
      */
@@ -15,7 +15,7 @@ public class FirstMainFrame extends JFrame {
         player = new PlayerReport();
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -113,46 +113,41 @@ public class FirstMainFrame extends JFrame {
         setSize(new java.awt.Dimension(550, 406));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void NameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_NameFieldActionPerformed
-
+    
     //to continue a name must be entered
     private void ContinueButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContinueButtonActionPerformed
         // TODO add your handling code here:
         if("".equals(NameField.getText())){
             String text = "Please enter player name to continue!";
             new WindowFrame("Enter Name!", text);
-       }else{
+        }else{
             player.setUsername(NameField.getText());
             FirstMainFrame.super.dispose();
             new ChooseHero().setVisible(true);
         }
     }//GEN-LAST:event_ContinueButtonActionPerformed
-
+    
     //shows the game manual
     private void HowToPlayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HowToPlayButtonActionPerformed
         // TODO add your handling code here:
         Manual.main();
     }//GEN-LAST:event_HowToPlayButtonActionPerformed
-
+    
     //end program
     private void EndButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EndButtonActionPerformed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_EndButtonActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-//        IntroductionFrame.jPanel1 = new Panel();
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -160,31 +155,17 @@ public class FirstMainFrame extends JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FirstMainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            frame = new FirstMainFrame();
+            JFrame frame = new FirstMainFrame();
             frame.setVisible(true);
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ContinueButton;
     private javax.swing.JButton EndButton;
@@ -195,6 +176,6 @@ public class FirstMainFrame extends JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
-
+    
 }
 

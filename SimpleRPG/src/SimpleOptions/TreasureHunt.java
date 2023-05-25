@@ -79,7 +79,7 @@ public class TreasureHunt {
    
     //output stats effected by treasure method
     public String treasureHero(){
-        String treasureText = ("You and " + Hero.heroName + " Treasure Hunt: " + treasure
+        String treasureText = ("Your Hero " + Hero.heroName + "went for Treasure Hunt: " + treasure
                     + "\nMoney increased by: " + treasureOption*10 + "\nMoney: " + Hero.money
                     + "\nHunger increased by: " + this.treasureHunger + "\nHunger: " + Hero.hunger);
         return treasureText;

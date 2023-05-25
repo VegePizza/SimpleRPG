@@ -79,7 +79,7 @@ public class Adventure {
    
     //output to user the effects of Play
     public String playHero(){
-        String playText = ("Hero has been given " + activity
+        String playText = ("Hero went for adventure " + activity
                        + "\nHero Health is increased by " + playOption*3 + "\nHealth: " + Hero.health
                        + "\nHero Hunger is increased by " + this.playHunger + "\nHunger: " + Hero.hunger
                        + "\nHero energy is decreased by " + this.playenergy + "\nenergy: " + Hero.energy);

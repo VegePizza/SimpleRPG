@@ -88,7 +88,7 @@ public class Train {
    
     //output to user effects of train
     public String trainHero(){
-        String trainText = ("Hero has been given " + train
+        String trainText = ("Hero has went training to " + train
                         + "\nHero Health is increased by " + trainOption + "\nHealth: " + Hero.health
                         + "\nHero Strength is increased by " + trainOption + "\nStrength: " + Hero.strength
                         + "\nHero Hunger is increased by " + this.trainHunger + "\nHunger: " + Hero.hunger
