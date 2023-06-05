@@ -1,13 +1,17 @@
 package SimpleCharacters;
 
-public class Swordsman extends Hero{
+public class Swordsman extends Hero {
+
+    // Instance variables
     private String gender;
     private String name;
-    
-    // initialise specific stats from default values
+
+    // Constructor to initialize specific stats and set name and gender
     public Swordsman(String name, String gender) {
         this.name = name;
         this.gender = gender;
+
+        // Setting default values for inherited stats
         super.hunger = 2;
         super.health = 10;
         super.strength = 8;
@@ -18,30 +22,39 @@ public class Swordsman extends Hero{
         super.money = 30;
     }
 
+    // Overrides the attack method from the Hero class
     @Override
     public void attack() {
         System.out.println(this.heroName + " swings his sword with " + this.strength + " strength!");
     }
-    
+
+    // Overrides the defend method from the Hero class
     @Override
     public void defend() {
         System.out.println(this.heroName + " defends with his sword!");
     }
 
-    //getters and setters
+    // Getter method for name
     public String getName() {
         return ("Name: " + name);
     }
+
+    // Setter method for name
     public void setName(String name) {
         this.name = name;
     }
-    public String getgender(){
-        return ("gender: " + gender);
+
+    // Getter method for gender
+    public String getGender() {
+        return ("Gender: " + gender);
     }
-    public void setgender(String gender) {
+
+    // Setter method for gender
+    public void setGender(String gender) {
         this.gender = gender;
     }
-    
+
+    // Overrides the getCharacterClass method from the Hero class
     @Override
     public String getCharacterClass() {
         return "Swordsman";
